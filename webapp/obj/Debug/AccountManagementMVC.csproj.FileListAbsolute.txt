@@ -1,0 +1,192 @@
+E:\sam\Projects\Account Management Project\AccountManagementSW\webapp\bin\SmartAdminMvc.dll.config
+E:\sam\Projects\Account Management Project\AccountManagementSW\webapp\bin\SmartAdminMvc.dll
+E:\sam\Projects\Account Management Project\AccountManagementSW\webapp\bin\SmartAdminMvc.pdb
+E:\sam\Projects\Account Management Project\AccountManagementSW\webapp\bin\SmartAdminMvc.dll.CodeAnalysisLog.xml
+E:\sam\Projects\Account Management Project\AccountManagementSW\webapp\bin\SmartAdminMvc.dll.lastcodeanalysissucceeded
+E:\sam\Projects\Account Management Project\AccountManagementSW\webapp\bin\Antlr3.Runtime.dll
+E:\sam\Projects\Account Management Project\AccountManagementSW\webapp\bin\EntityFramework.dll
+E:\sam\Projects\Account Management Project\AccountManagementSW\webapp\bin\EntityFramework.SqlServer.dll
+E:\sam\Projects\Account Management Project\AccountManagementSW\webapp\bin\Microsoft.AspNet.Identity.Core.dll
+E:\sam\Projects\Account Management Project\AccountManagementSW\webapp\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\sam\Projects\Account Management Project\AccountManagementSW\webapp\bin\Microsoft.Web.Infrastructure.dll
+E:\sam\Projects\Account Management Project\AccountManagementSW\webapp\bin\Newtonsoft.Json.dll
+E:\sam\Projects\Account Management Project\AccountManagementSW\webapp\bin\System.Linq.Dynamic.dll
+E:\sam\Projects\Account Management Project\AccountManagementSW\webapp\bin\System.Web.Helpers.dll
+E:\sam\Projects\Account Management Project\AccountManagementSW\webapp\bin\System.Web.Mvc.dll
+E:\sam\Projects\Account Management Project\AccountManagementSW\webapp\bin\System.Web.Optimization.dll
+E:\sam\Projects\Account Management Project\AccountManagementSW\webapp\bin\System.Web.Razor.dll
+E:\sam\Projects\Account Management Project\AccountManagementSW\webapp\bin\System.Web.WebPages.Deployment.dll
+E:\sam\Projects\Account Management Project\AccountManagementSW\webapp\bin\System.Web.WebPages.dll
+E:\sam\Projects\Account Management Project\AccountManagementSW\webapp\bin\System.Web.WebPages.Razor.dll
+E:\sam\Projects\Account Management Project\AccountManagementSW\webapp\bin\WebGrease.dll
+E:\sam\Projects\Account Management Project\AccountManagementSW\webapp\bin\FluentValidationNA.dll
+E:\sam\Projects\Account Management Project\AccountManagementSW\webapp\bin\Antlr3.Runtime.pdb
+E:\sam\Projects\Account Management Project\AccountManagementSW\webapp\bin\EntityFramework.xml
+E:\sam\Projects\Account Management Project\AccountManagementSW\webapp\bin\EntityFramework.SqlServer.xml
+E:\sam\Projects\Account Management Project\AccountManagementSW\webapp\bin\Microsoft.AspNet.Identity.Core.xml
+E:\sam\Projects\Account Management Project\AccountManagementSW\webapp\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\sam\Projects\Account Management Project\AccountManagementSW\webapp\bin\Newtonsoft.Json.xml
+E:\sam\Projects\Account Management Project\AccountManagementSW\webapp\bin\System.Linq.Dynamic.xml
+E:\sam\Projects\Account Management Project\AccountManagementSW\webapp\bin\System.Web.Helpers.xml
+E:\sam\Projects\Account Management Project\AccountManagementSW\webapp\bin\System.Web.Mvc.xml
+E:\sam\Projects\Account Management Project\AccountManagementSW\webapp\bin\System.Web.Optimization.xml
+E:\sam\Projects\Account Management Project\AccountManagementSW\webapp\bin\System.Web.Razor.xml
+E:\sam\Projects\Account Management Project\AccountManagementSW\webapp\bin\System.Web.WebPages.xml
+E:\sam\Projects\Account Management Project\AccountManagementSW\webapp\bin\System.Web.WebPages.Deployment.xml
+E:\sam\Projects\Account Management Project\AccountManagementSW\webapp\bin\System.Web.WebPages.Razor.xml
+E:\sam\Projects\Account Management Project\AccountManagementSW\webapp\bin\FluentValidationNA.xml
+E:\sam\Projects\Account Management Project\AccountManagementSW\webapp\obj\Debug\AccountManagementMVC.csprojResolveAssemblyReference.cache
+E:\sam\Projects\Account Management Project\AccountManagementSW\webapp\obj\Debug\SmartAdminMvc.dll
+E:\sam\Projects\Account Management Project\AccountManagementSW\webapp\obj\Debug\SmartAdminMvc.pdb
+C:\Projects\AccountManagementSW\webapp\bin\SmartAdminMvc.dll.config
+C:\Projects\AccountManagementSW\webapp\bin\SmartAdminMvc.dll
+C:\Projects\AccountManagementSW\webapp\bin\SmartAdminMvc.pdb
+C:\Projects\AccountManagementSW\webapp\bin\SmartAdminMvc.dll.CodeAnalysisLog.xml
+C:\Projects\AccountManagementSW\webapp\bin\SmartAdminMvc.dll.lastcodeanalysissucceeded
+C:\Projects\AccountManagementSW\webapp\bin\Antlr3.Runtime.dll
+C:\Projects\AccountManagementSW\webapp\bin\EntityFramework.dll
+C:\Projects\AccountManagementSW\webapp\bin\EntityFramework.SqlServer.dll
+C:\Projects\AccountManagementSW\webapp\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Projects\AccountManagementSW\webapp\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Projects\AccountManagementSW\webapp\bin\Microsoft.Web.Infrastructure.dll
+C:\Projects\AccountManagementSW\webapp\bin\Newtonsoft.Json.dll
+C:\Projects\AccountManagementSW\webapp\bin\System.Web.Helpers.dll
+C:\Projects\AccountManagementSW\webapp\bin\System.Web.Mvc.dll
+C:\Projects\AccountManagementSW\webapp\bin\System.Web.Optimization.dll
+C:\Projects\AccountManagementSW\webapp\bin\System.Web.Razor.dll
+C:\Projects\AccountManagementSW\webapp\bin\System.Web.WebPages.Deployment.dll
+C:\Projects\AccountManagementSW\webapp\bin\System.Web.WebPages.dll
+C:\Projects\AccountManagementSW\webapp\bin\System.Web.WebPages.Razor.dll
+C:\Projects\AccountManagementSW\webapp\bin\WebGrease.dll
+C:\Projects\AccountManagementSW\webapp\bin\Antlr3.Runtime.pdb
+C:\Projects\AccountManagementSW\webapp\bin\EntityFramework.xml
+C:\Projects\AccountManagementSW\webapp\bin\EntityFramework.SqlServer.xml
+C:\Projects\AccountManagementSW\webapp\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Projects\AccountManagementSW\webapp\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Projects\AccountManagementSW\webapp\bin\Newtonsoft.Json.xml
+C:\Projects\AccountManagementSW\webapp\bin\System.Web.Helpers.xml
+C:\Projects\AccountManagementSW\webapp\bin\System.Web.Mvc.xml
+C:\Projects\AccountManagementSW\webapp\bin\System.Web.Optimization.xml
+C:\Projects\AccountManagementSW\webapp\bin\System.Web.Razor.xml
+C:\Projects\AccountManagementSW\webapp\bin\System.Web.WebPages.xml
+C:\Projects\AccountManagementSW\webapp\bin\System.Web.WebPages.Deployment.xml
+C:\Projects\AccountManagementSW\webapp\bin\System.Web.WebPages.Razor.xml
+C:\Projects\AccountManagementSW\webapp\obj\Debug\SmartAdminMvc.dll
+C:\Projects\AccountManagementSW\webapp\obj\Debug\SmartAdminMvc.pdb
+C:\Projects\AccountManagementSW\webapp\obj\Debug\AccountManagementMVC.csprojResolveAssemblyReference.cache
+C:\Projects\AccountManagementSW\webapp\bin\FluentValidationNA.dll
+C:\Projects\AccountManagementSW\webapp\bin\FluentValidationNA.xml
+I:\AccountManagementSW\webapp\bin\SmartAdminMvc.dll.config
+I:\AccountManagementSW\webapp\bin\SmartAdminMvc.dll
+I:\AccountManagementSW\webapp\bin\SmartAdminMvc.pdb
+I:\AccountManagementSW\webapp\bin\SmartAdminMvc.dll.CodeAnalysisLog.xml
+I:\AccountManagementSW\webapp\bin\SmartAdminMvc.dll.lastcodeanalysissucceeded
+I:\AccountManagementSW\webapp\bin\Antlr3.Runtime.dll
+I:\AccountManagementSW\webapp\bin\EntityFramework.dll
+I:\AccountManagementSW\webapp\bin\EntityFramework.SqlServer.dll
+I:\AccountManagementSW\webapp\bin\FluentValidationNA.dll
+I:\AccountManagementSW\webapp\bin\Microsoft.AspNet.Identity.Core.dll
+I:\AccountManagementSW\webapp\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+I:\AccountManagementSW\webapp\bin\Microsoft.Web.Infrastructure.dll
+I:\AccountManagementSW\webapp\bin\Newtonsoft.Json.dll
+I:\AccountManagementSW\webapp\bin\System.Web.Helpers.dll
+I:\AccountManagementSW\webapp\bin\System.Web.Mvc.dll
+I:\AccountManagementSW\webapp\bin\System.Web.Optimization.dll
+I:\AccountManagementSW\webapp\bin\System.Web.Razor.dll
+I:\AccountManagementSW\webapp\bin\System.Web.WebPages.Deployment.dll
+I:\AccountManagementSW\webapp\bin\System.Web.WebPages.dll
+I:\AccountManagementSW\webapp\bin\System.Web.WebPages.Razor.dll
+I:\AccountManagementSW\webapp\bin\WebGrease.dll
+I:\AccountManagementSW\webapp\bin\Antlr3.Runtime.pdb
+I:\AccountManagementSW\webapp\bin\EntityFramework.xml
+I:\AccountManagementSW\webapp\bin\EntityFramework.SqlServer.xml
+I:\AccountManagementSW\webapp\bin\FluentValidationNA.xml
+I:\AccountManagementSW\webapp\bin\Microsoft.AspNet.Identity.Core.xml
+I:\AccountManagementSW\webapp\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+I:\AccountManagementSW\webapp\bin\Newtonsoft.Json.xml
+I:\AccountManagementSW\webapp\bin\System.Web.Helpers.xml
+I:\AccountManagementSW\webapp\bin\System.Web.Mvc.xml
+I:\AccountManagementSW\webapp\bin\System.Web.Optimization.xml
+I:\AccountManagementSW\webapp\bin\System.Web.Razor.xml
+I:\AccountManagementSW\webapp\bin\System.Web.WebPages.xml
+I:\AccountManagementSW\webapp\bin\System.Web.WebPages.Deployment.xml
+I:\AccountManagementSW\webapp\bin\System.Web.WebPages.Razor.xml
+I:\AccountManagementSW\webapp\obj\Debug\SmartAdminMvc.dll
+I:\AccountManagementSW\webapp\obj\Debug\SmartAdminMvc.pdb
+I:\AccountManagementSW\webapp\obj\Debug\AccountManagementMVC.csprojResolveAssemblyReference.cache
+D:\Projects\Rick\AccountManagementSW\webapp\bin\SmartAdminMvc.dll.config
+D:\Projects\Rick\AccountManagementSW\webapp\bin\SmartAdminMvc.dll
+D:\Projects\Rick\AccountManagementSW\webapp\bin\SmartAdminMvc.pdb
+D:\Projects\Rick\AccountManagementSW\webapp\bin\SmartAdminMvc.dll.CodeAnalysisLog.xml
+D:\Projects\Rick\AccountManagementSW\webapp\bin\SmartAdminMvc.dll.lastcodeanalysissucceeded
+D:\Projects\Rick\AccountManagementSW\webapp\bin\Antlr3.Runtime.dll
+D:\Projects\Rick\AccountManagementSW\webapp\bin\EntityFramework.dll
+D:\Projects\Rick\AccountManagementSW\webapp\bin\EntityFramework.SqlServer.dll
+D:\Projects\Rick\AccountManagementSW\webapp\bin\FluentValidationNA.dll
+D:\Projects\Rick\AccountManagementSW\webapp\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Projects\Rick\AccountManagementSW\webapp\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Projects\Rick\AccountManagementSW\webapp\bin\Microsoft.Web.Infrastructure.dll
+D:\Projects\Rick\AccountManagementSW\webapp\bin\Newtonsoft.Json.dll
+D:\Projects\Rick\AccountManagementSW\webapp\bin\System.Web.Helpers.dll
+D:\Projects\Rick\AccountManagementSW\webapp\bin\System.Web.Mvc.dll
+D:\Projects\Rick\AccountManagementSW\webapp\bin\System.Web.Optimization.dll
+D:\Projects\Rick\AccountManagementSW\webapp\bin\System.Web.Razor.dll
+D:\Projects\Rick\AccountManagementSW\webapp\bin\System.Web.WebPages.Deployment.dll
+D:\Projects\Rick\AccountManagementSW\webapp\bin\System.Web.WebPages.dll
+D:\Projects\Rick\AccountManagementSW\webapp\bin\System.Web.WebPages.Razor.dll
+D:\Projects\Rick\AccountManagementSW\webapp\bin\WebGrease.dll
+D:\Projects\Rick\AccountManagementSW\webapp\bin\Antlr3.Runtime.pdb
+D:\Projects\Rick\AccountManagementSW\webapp\bin\EntityFramework.xml
+D:\Projects\Rick\AccountManagementSW\webapp\bin\EntityFramework.SqlServer.xml
+D:\Projects\Rick\AccountManagementSW\webapp\bin\FluentValidationNA.xml
+D:\Projects\Rick\AccountManagementSW\webapp\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Projects\Rick\AccountManagementSW\webapp\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Projects\Rick\AccountManagementSW\webapp\bin\Newtonsoft.Json.xml
+D:\Projects\Rick\AccountManagementSW\webapp\bin\System.Web.Helpers.xml
+D:\Projects\Rick\AccountManagementSW\webapp\bin\System.Web.Mvc.xml
+D:\Projects\Rick\AccountManagementSW\webapp\bin\System.Web.Optimization.xml
+D:\Projects\Rick\AccountManagementSW\webapp\bin\System.Web.Razor.xml
+D:\Projects\Rick\AccountManagementSW\webapp\bin\System.Web.WebPages.xml
+D:\Projects\Rick\AccountManagementSW\webapp\bin\System.Web.WebPages.Deployment.xml
+D:\Projects\Rick\AccountManagementSW\webapp\bin\System.Web.WebPages.Razor.xml
+D:\Projects\Rick\AccountManagementSW\webapp\obj\Debug\SmartAdminMvc.dll
+D:\Projects\Rick\AccountManagementSW\webapp\obj\Debug\SmartAdminMvc.pdb
+D:\Projects\Rick\AccountManagementSW\webapp\obj\Debug\AccountManagementMVC.csprojResolveAssemblyReference.cache
+I:\Rick\Rick\AccountManagementSW\webapp\bin\SmartAdminMvc.dll.config
+I:\Rick\Rick\AccountManagementSW\webapp\bin\SmartAdminMvc.dll
+I:\Rick\Rick\AccountManagementSW\webapp\bin\SmartAdminMvc.pdb
+I:\Rick\Rick\AccountManagementSW\webapp\bin\SmartAdminMvc.dll.CodeAnalysisLog.xml
+I:\Rick\Rick\AccountManagementSW\webapp\bin\SmartAdminMvc.dll.lastcodeanalysissucceeded
+I:\Rick\Rick\AccountManagementSW\webapp\bin\Antlr3.Runtime.dll
+I:\Rick\Rick\AccountManagementSW\webapp\bin\EntityFramework.dll
+I:\Rick\Rick\AccountManagementSW\webapp\bin\EntityFramework.SqlServer.dll
+I:\Rick\Rick\AccountManagementSW\webapp\bin\FluentValidationNA.dll
+I:\Rick\Rick\AccountManagementSW\webapp\bin\Microsoft.AspNet.Identity.Core.dll
+I:\Rick\Rick\AccountManagementSW\webapp\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+I:\Rick\Rick\AccountManagementSW\webapp\bin\Microsoft.Web.Infrastructure.dll
+I:\Rick\Rick\AccountManagementSW\webapp\bin\Newtonsoft.Json.dll
+I:\Rick\Rick\AccountManagementSW\webapp\bin\System.Web.Helpers.dll
+I:\Rick\Rick\AccountManagementSW\webapp\bin\System.Web.Mvc.dll
+I:\Rick\Rick\AccountManagementSW\webapp\bin\System.Web.Optimization.dll
+I:\Rick\Rick\AccountManagementSW\webapp\bin\System.Web.Razor.dll
+I:\Rick\Rick\AccountManagementSW\webapp\bin\System.Web.WebPages.Deployment.dll
+I:\Rick\Rick\AccountManagementSW\webapp\bin\System.Web.WebPages.dll
+I:\Rick\Rick\AccountManagementSW\webapp\bin\System.Web.WebPages.Razor.dll
+I:\Rick\Rick\AccountManagementSW\webapp\bin\WebGrease.dll
+I:\Rick\Rick\AccountManagementSW\webapp\bin\Antlr3.Runtime.pdb
+I:\Rick\Rick\AccountManagementSW\webapp\bin\EntityFramework.xml
+I:\Rick\Rick\AccountManagementSW\webapp\bin\EntityFramework.SqlServer.xml
+I:\Rick\Rick\AccountManagementSW\webapp\bin\FluentValidationNA.xml
+I:\Rick\Rick\AccountManagementSW\webapp\bin\Microsoft.AspNet.Identity.Core.xml
+I:\Rick\Rick\AccountManagementSW\webapp\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+I:\Rick\Rick\AccountManagementSW\webapp\bin\Newtonsoft.Json.xml
+I:\Rick\Rick\AccountManagementSW\webapp\bin\System.Web.Helpers.xml
+I:\Rick\Rick\AccountManagementSW\webapp\bin\System.Web.Mvc.xml
+I:\Rick\Rick\AccountManagementSW\webapp\bin\System.Web.Optimization.xml
+I:\Rick\Rick\AccountManagementSW\webapp\bin\System.Web.Razor.xml
+I:\Rick\Rick\AccountManagementSW\webapp\bin\System.Web.WebPages.xml
+I:\Rick\Rick\AccountManagementSW\webapp\bin\System.Web.WebPages.Deployment.xml
+I:\Rick\Rick\AccountManagementSW\webapp\bin\System.Web.WebPages.Razor.xml
+I:\Rick\Rick\AccountManagementSW\webapp\obj\Debug\AccountManagementMVC.csprojResolveAssemblyReference.cache
+I:\Rick\Rick\AccountManagementSW\webapp\obj\Debug\SmartAdminMvc.dll
+I:\Rick\Rick\AccountManagementSW\webapp\obj\Debug\SmartAdminMvc.pdb

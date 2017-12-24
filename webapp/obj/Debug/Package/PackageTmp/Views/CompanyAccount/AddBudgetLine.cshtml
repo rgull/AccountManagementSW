@@ -1,0 +1,269 @@
+﻿@model SmartAdminMvc.Models.AddCompnayBudgetLine
+@{
+    ViewBag.Title = "AddBudgetLine";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/BoostrapThemes/css/jquery-ui.css" rel="stylesheet" />
+<style>
+    .ui-datepicker-calendar {
+        display: none;
+    }
+</style>
+<div id="content" class="container width">
+    <div class="row center">
+
+        <div class="col-xs-12 col-sm-12 col-md-8 in_blk">
+            <div class="well no-padding">
+                <form method="post" action="#" name="logFrm" class="smart-form clientform client-form" role="form">
+                    @using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl }))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(true)
+                        <header class="left_align">
+                            Add New Budgeted Amount
+                        </header>
+
+                        <fieldset>
+                            <section class="radiowrap">
+                                <label class="label">Budget Type</label>
+                                <label class="input">
+                                    @*<i class="icon-append fa fa-user"></i>*@
+                                    @*@Html.DropDownListFor(model => model.budgetTypeId, Model.BudgetTypeList, "--- Select Budget Type ---", new { @class = "form-control", @required = "required", placeholder = "Budget Type", id = "ddBudgetType" })*@
+                                    <div class="inline-group">
+                                        @for (int i = 0; i < Model.BudgetTypeList.Count(); i++)
+                                        {
+                                            <label class="radio">
+                                                @Html.RadioButtonFor(m => Model.SelectedBusgetTypeId, Model.BudgetTypeList[i].id, new { type = "radio", name = "radio-inline", @required = "required", id = "ddBudgetType" })
+                                                <i></i> @Model.BudgetTypeList[i].name
+                                                @Html.HiddenFor(m => Model.BudgetTypeList[i].id)
+                                                @Html.HiddenFor(m => Model.BudgetTypeList[i].name)
+                                            </label>
+
+                                        }
+                                        @*<b class="tooltip tooltip-top-right"><i class="fa fa-user txt-color-teal"></i> Please enter Budget Type</b>*@
+                                    </div>
+
+                                </label>
+                            </section>
+                            <section class="formrow2">
+                                <label class="label">Select Category</label>
+                                <label class="input">
+                                    @*<i class="icon-append fa fa-user"></i>*@
+                                    @Html.DropDownListFor(model => model.categoryId, Model.MaincategoryList, "--- Select Budget Type First ---", new { @class = "form-control", @required = "required", placeholder = "Category", id = "ddcategory" })
+                                    <b class="tooltip tooltip-top-right"><i class="fa fa-user txt-color-teal"></i> Please enter Budget Type</b>
+                                </label>
+                            </section>
+                            <section class="formrow2">
+                                <label class="label"> Select Line Item</label>
+                                <label class="input">
+                                    @*<i class="icon-append fa fa-user"></i>*@
+                                    @Html.DropDownListFor(model => model.categoryValueId, Model.MaincategoryList, "--- Select Category First ---", new { @class = "form-control", @required = "required", placeholder = "Category", id = "ddcategoryValue" })
+                                    @*<label for="reqJobProduct">Plese select</label>*@
+                                    <b class="tooltip tooltip-top-right"><i class="fa fa-user txt-color-teal"></i> Please enter Line Item</b>
+                                </label>
+                            </section>
+
+                            <section class="formrow2">
+                                <label class="label"> Select Date</label>
+                                <label class="input">
+                                    <i class="icon-append fa fa-calendar"></i>
+                                    @*@Html.TextBoxFor(model => model.date, new { @class = "form-control datepicker", @required = "required", placeholder = "Expected date here..." })*@
+                                    @Html.TextBoxFor(m => m.selectedDate, new { @class = "form-control datepicker1", @readonly = "readonly", id = "selectedDate", @required = "required", type = "datetime" })
+                                    @*<input id="finishdate" class="form-control hasDatepicker" type="text" placeholder="Expected finish date" name="finishdate">*@
+                                </label>
+                            </section>
+                            <section class="formrow2">
+                                @*<div class="inline-group">
+                                        <label class="radio">
+                                            <input type="radio" name="radio-inline" checked="">
+                                            <i></i>Visa
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" name="radio-inline">
+                                            <i></i>MasterCard
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" name="radio-inline">
+                                            <i></i>American Express
+                                        </label>
+                                    </div>*@
+
+                                @*foreach(var answer in Model.Subjects[i].Questions[j].PossibleAnswers )
+                                    {
+                                    <div>
+                                        @Html.RadioButtonFor(m => m.Subjects[i].Questions[j].SelectedAnswer, answer.ID, new { id = answer.ID })
+                                        <label for="@answer.ID">@answer.Text</label>
+                                    </div>
+                                    }*@
+                                <label class="label"> Divide Budget By </label>
+                                <div class="inline-group">
+                                    @for (int i = 0; i < Model.ReportTypeList.Count(); i++)
+                                    {
+                                        <label class="radio">
+                                            @Html.RadioButtonFor(m => Model.SelectedreportTypeId, Model.ReportTypeList[i].id, new { type = "radio", name = "radio-inline", @required = "required", })
+                                            <i></i> @Model.ReportTypeList[i].name
+                                            @Html.HiddenFor(m => Model.ReportTypeList[i].id)
+                                            @Html.HiddenFor(m => Model.ReportTypeList[i].name)
+                                        </label>
+
+                                    }
+                                    <b class="tooltip tooltip-top-right"><i class="fa fa-user txt-color-teal"></i> Please enter Budget Type</b>
+                                </div>
+                            </section>
+                            <section class="formrow2">
+                                <label class="label">Budgeted Amount (@System.Configuration.ConfigurationManager.AppSettings["CurrencySymbol"].ToString())</label>
+                                <label class="input">
+                                    <i class="icon-append fa fa-user"></i>
+                                    @Html.TextBoxFor(m => m.budget, new { @class = "form-control", @required = "required", placeholder = "Budgeted Amount" })
+                                    <b class="tooltip tooltip-top-right"><i class="fa fa-user txt-color-teal"></i> Please enter Budgeted Amount</b>
+                                </label>
+                            </section>
+                            <section class="formrow2">
+                                <label class="label">Once In Month</label>
+                                <div class="checkboxgroup">
+                                    <label class="checkbox">
+                                        @*<input type="checkbox" name="rememberMe" value="true" checked="checked">*@
+                                        @Html.CheckBoxFor(m => m.isAddOnceInMonth)
+                                        <i></i> Select this if you want to split Actual amount in a Month.
+                                    </label>
+                                </div>
+                            </section>
+                        </fieldset>
+                        <footer>
+                            <button class="btn btn-white" type="button" onclick="@("location.href='" + Url.Action("BudgetLineView", "CompanyAccount") + "'")">Cancel</button>
+                            <button type="submit" id="btnsave" class="btn btn-primary">
+                                Save
+                            </button>
+                        </footer>
+                    }
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section pagespecific {
+    <script type="text/javascript">
+        $(function () {
+            $(':radio[name=SelectedBusgetTypeId]').change(function () {
+
+                //  $('#ddBudgetType').change(function () {
+                //  alert("Abhai");
+                var ddlsource = $(this).val();
+                var ddltarget = "#ddcategory";
+                $.getJSON('/CompanyAccount/Cat_SelectedState/' + $(this).val(), function (data) {
+                    $(ddltarget).empty();
+                    $(ddltarget).append("<option value=''>--- Select Category ---</option>");
+                    $.each(data, function (index, optionData) {
+                        $(ddltarget).append("<option value='" + optionData.Value + "'>" + optionData.Text + "</option>");
+                    });
+
+                });
+            });
+        });
+        $(function () {
+            var ddlsource = $("#ddBudgetType").val();
+            var ddltarget = "#ddcategory";
+            $.getJSON('/CompanyAccount/Cat_SelectedState/' + $("#ddBudgetType").val(), function (data) {
+                $(ddltarget).empty();
+                $(ddltarget).append("<option value=''>--- Select Category ---</option>");
+                $.each(data, function (index, optionData) {
+                    $(ddltarget).append("<option value='" + optionData.Value + "'>" + optionData.Text + "</option>");
+                });
+
+            });
+        });
+        $(function () { // will trigger when the document is ready
+            $('.datepicker1').datepicker({
+                changeMonth: true,
+                changeYear: true,
+                dateFormat: 'MM yy',
+                onClose: function (dateText, inst) {
+                    var month = $("#ui-datepicker-div .ui-datepicker-month :selected").val();
+                    var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
+                    $(this).datepicker('setDate', new Date(year, month, 1));
+
+                },
+                beforeShow: function (input, inst) {
+                    if ((datestr = $(this).val()).length > 0) {
+                        year = datestr.substring(datestr.length - 4, datestr.length);
+                        month = jQuery.inArray(datestr.substring(0, datestr.length - 5), $(this).datepicker('option', 'monthNames'));
+                        $(this).datepicker('option', 'defaultDate', new Date(year, month, 1));
+                        $(this).datepicker('setDate', new Date(year, month, 1));
+                    }
+                },
+                onSelect: function () { }
+            }); //Initialise any date pickers
+        });
+        $(function () {
+            $('#btnsave').click(function () {
+               // alert("In");
+                var flag = false;
+                var selectedDate = $("#selectedDate").val();
+                var categoryValue = $("#ddcategoryValue").val();
+                var category = $("#ddcategory").val();
+                if (category != 0 )
+                    {
+                if ((selectedDate == null || selectedDate == "") && (categoryValue == 0) && (category==0)) {
+                    alert("Please select a category,line item and date.");
+                    return flag;
+                }
+                else if ((selectedDate == null || selectedDate == "") && (categoryValue == 0 || categoryValue == null || categoryValue == "")) {
+                    alert("Please select a Line Item and date.");
+                    //$('#reqJobProduct').show();
+                    //jQuery("#JobProductType").css({ "border-color": "red" });
+                    //document.getElementById('reqJobProduct').innerHTML = "Please select a product";
+                    return flag;
+                } else if (categoryValue == 0) {
+                    alert("Please select a Line Item.");
+                    return flag;
+                }
+                else  if (selectedDate == null || selectedDate == ""){
+                    alert("Please select a date.");
+                    return flag;
+                }
+                else
+                {
+
+                }
+                }
+                else {
+                    alert("Please select a category.");
+                    return flag;
+                }
+                //var flag = false;
+                //var jobid = $("#categoryId").val();
+                //var product_id = $("#JobProductType").val();
+                //if (product_id == null || product_id == "") {
+                //    $('#reqJobProduct').show();
+                //    jQuery("#JobProductType").css({ "border-color": "red" });
+                //    document.getElementById('reqJobProduct').innerHTML = "Please select a product";
+                //    return flag;
+                //}
+                //else { $('#reqJobProduct').hide(); jQuery("#JobProductType").css({ "border-color": "#1ab394" }); }
+
+            });
+        });
+        $(function () {
+
+            $('#ddcategory').change(function () {
+                // alert("Abhai");
+                var ddlsource = $('#ddcategory').val();
+                var ddltarget = "#ddcategoryValue";
+                $.getJSON('/CompanyAccount/CatValue_SelectedState/' + $('#ddcategory').val(), function (data) {
+                    $(ddltarget).empty();
+                    $(ddltarget).append("<option value=''>--- Select Line Item ---</option>");
+                    $.each(data, function (index, optionData) {
+                        $(ddltarget).append("<option value='" + optionData.Value + "'>" + optionData.Text + "</option>");
+                    });
+
+                });
+            });
+        });
+
+    </script>
+}
+
+
+

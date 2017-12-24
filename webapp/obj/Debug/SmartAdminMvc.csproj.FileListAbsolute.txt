@@ -1,0 +1,144 @@
+E:\PrimalWear_Design\ASP.NetMVC5_Full_Version\webapp\bin\SmartAdminMvc.dll.config
+E:\PrimalWear_Design\ASP.NetMVC5_Full_Version\webapp\bin\SmartAdminMvc.dll
+E:\PrimalWear_Design\ASP.NetMVC5_Full_Version\webapp\bin\SmartAdminMvc.pdb
+E:\PrimalWear_Design\ASP.NetMVC5_Full_Version\webapp\bin\SmartAdminMvc.dll.CodeAnalysisLog.xml
+E:\PrimalWear_Design\ASP.NetMVC5_Full_Version\webapp\bin\SmartAdminMvc.dll.lastcodeanalysissucceeded
+E:\PrimalWear_Design\ASP.NetMVC5_Full_Version\webapp\bin\Antlr3.Runtime.dll
+E:\PrimalWear_Design\ASP.NetMVC5_Full_Version\webapp\bin\EntityFramework.dll
+E:\PrimalWear_Design\ASP.NetMVC5_Full_Version\webapp\bin\EntityFramework.SqlServer.dll
+E:\PrimalWear_Design\ASP.NetMVC5_Full_Version\webapp\bin\Microsoft.AspNet.Identity.Core.dll
+E:\PrimalWear_Design\ASP.NetMVC5_Full_Version\webapp\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\PrimalWear_Design\ASP.NetMVC5_Full_Version\webapp\bin\Microsoft.Web.Infrastructure.dll
+E:\PrimalWear_Design\ASP.NetMVC5_Full_Version\webapp\bin\Newtonsoft.Json.dll
+E:\PrimalWear_Design\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.Helpers.dll
+E:\PrimalWear_Design\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.Mvc.dll
+E:\PrimalWear_Design\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.Optimization.dll
+E:\PrimalWear_Design\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.Razor.dll
+E:\PrimalWear_Design\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.WebPages.Deployment.dll
+E:\PrimalWear_Design\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.WebPages.dll
+E:\PrimalWear_Design\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.WebPages.Razor.dll
+E:\PrimalWear_Design\ASP.NetMVC5_Full_Version\webapp\bin\WebGrease.dll
+E:\PrimalWear_Design\ASP.NetMVC5_Full_Version\webapp\bin\Antlr3.Runtime.pdb
+E:\PrimalWear_Design\ASP.NetMVC5_Full_Version\webapp\bin\EntityFramework.xml
+E:\PrimalWear_Design\ASP.NetMVC5_Full_Version\webapp\bin\EntityFramework.SqlServer.xml
+E:\PrimalWear_Design\ASP.NetMVC5_Full_Version\webapp\bin\Microsoft.AspNet.Identity.Core.xml
+E:\PrimalWear_Design\ASP.NetMVC5_Full_Version\webapp\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\PrimalWear_Design\ASP.NetMVC5_Full_Version\webapp\bin\Newtonsoft.Json.xml
+E:\PrimalWear_Design\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.Helpers.xml
+E:\PrimalWear_Design\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.Mvc.xml
+E:\PrimalWear_Design\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.Optimization.xml
+E:\PrimalWear_Design\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.Razor.xml
+E:\PrimalWear_Design\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.WebPages.xml
+E:\PrimalWear_Design\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.WebPages.Deployment.xml
+E:\PrimalWear_Design\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.WebPages.Razor.xml
+E:\PrimalWear_Design\ASP.NetMVC5_Full_Version\webapp\obj\Debug\SmartAdminMvc.csprojResolveAssemblyReference.cache
+E:\PrimalWear_Design\ASP.NetMVC5_Full_Version\webapp\obj\Debug\SmartAdminMvc.dll
+E:\PrimalWear_Design\ASP.NetMVC5_Full_Version\webapp\obj\Debug\SmartAdminMvc.pdb
+D:\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\SmartAdminMvc.dll.config
+D:\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\SmartAdminMvc.dll
+D:\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\SmartAdminMvc.pdb
+D:\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\SmartAdminMvc.dll.CodeAnalysisLog.xml
+D:\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\SmartAdminMvc.dll.lastcodeanalysissucceeded
+D:\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\Antlr3.Runtime.dll
+D:\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\EntityFramework.dll
+D:\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\EntityFramework.SqlServer.dll
+D:\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\Microsoft.AspNet.Identity.Core.dll
+D:\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\Microsoft.Web.Infrastructure.dll
+D:\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\Newtonsoft.Json.dll
+D:\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.Helpers.dll
+D:\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.Mvc.dll
+D:\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.Optimization.dll
+D:\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.Razor.dll
+D:\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.WebPages.Deployment.dll
+D:\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.WebPages.dll
+D:\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.WebPages.Razor.dll
+D:\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\WebGrease.dll
+D:\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\Antlr3.Runtime.pdb
+D:\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\EntityFramework.xml
+D:\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\EntityFramework.SqlServer.xml
+D:\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\Microsoft.AspNet.Identity.Core.xml
+D:\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\Newtonsoft.Json.xml
+D:\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.Helpers.xml
+D:\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.Mvc.xml
+D:\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.Optimization.xml
+D:\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.Razor.xml
+D:\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.WebPages.xml
+D:\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.WebPages.Deployment.xml
+D:\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.WebPages.Razor.xml
+D:\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\obj\Debug\SmartAdminMvc.csprojResolveAssemblyReference.cache
+D:\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\obj\Debug\SmartAdminMvc.dll
+D:\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\obj\Debug\SmartAdminMvc.pdb
+\\net2\bharat backup\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\SmartAdminMvc.dll.config
+\\net2\bharat backup\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\SmartAdminMvc.dll
+\\net2\bharat backup\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\SmartAdminMvc.pdb
+\\net2\bharat backup\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\SmartAdminMvc.dll.CodeAnalysisLog.xml
+\\net2\bharat backup\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\SmartAdminMvc.dll.lastcodeanalysissucceeded
+\\net2\bharat backup\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\Antlr3.Runtime.dll
+\\net2\bharat backup\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\EntityFramework.dll
+\\net2\bharat backup\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\EntityFramework.SqlServer.dll
+\\net2\bharat backup\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\Microsoft.AspNet.Identity.Core.dll
+\\net2\bharat backup\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+\\net2\bharat backup\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\Microsoft.Web.Infrastructure.dll
+\\net2\bharat backup\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\Newtonsoft.Json.dll
+\\net2\bharat backup\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.Helpers.dll
+\\net2\bharat backup\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.Mvc.dll
+\\net2\bharat backup\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.Optimization.dll
+\\net2\bharat backup\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.Razor.dll
+\\net2\bharat backup\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.WebPages.Deployment.dll
+\\net2\bharat backup\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.WebPages.dll
+\\net2\bharat backup\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.WebPages.Razor.dll
+\\net2\bharat backup\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\WebGrease.dll
+\\net2\bharat backup\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\Antlr3.Runtime.pdb
+\\net2\bharat backup\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\EntityFramework.xml
+\\net2\bharat backup\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\EntityFramework.SqlServer.xml
+\\net2\bharat backup\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\Microsoft.AspNet.Identity.Core.xml
+\\net2\bharat backup\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+\\net2\bharat backup\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\Newtonsoft.Json.xml
+\\net2\bharat backup\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.Helpers.xml
+\\net2\bharat backup\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.Mvc.xml
+\\net2\bharat backup\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.Optimization.xml
+\\net2\bharat backup\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.Razor.xml
+\\net2\bharat backup\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.WebPages.xml
+\\net2\bharat backup\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.WebPages.Deployment.xml
+\\net2\bharat backup\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.WebPages.Razor.xml
+\\net2\bharat backup\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\obj\Debug\SmartAdminMvc.csprojResolveAssemblyReference.cache
+\\net2\bharat backup\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\obj\Debug\SmartAdminMvc.dll
+\\net2\bharat backup\PCP\PCP_2016\PCP_2016\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\obj\Debug\SmartAdminMvc.pdb
+D:\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\SmartAdminMvc.dll.config
+D:\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\SmartAdminMvc.dll
+D:\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\SmartAdminMvc.pdb
+D:\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\SmartAdminMvc.dll.CodeAnalysisLog.xml
+D:\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\SmartAdminMvc.dll.lastcodeanalysissucceeded
+D:\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\Antlr3.Runtime.dll
+D:\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\EntityFramework.dll
+D:\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\EntityFramework.SqlServer.dll
+D:\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\Microsoft.AspNet.Identity.Core.dll
+D:\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\Microsoft.Web.Infrastructure.dll
+D:\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\Newtonsoft.Json.dll
+D:\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.Helpers.dll
+D:\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.Mvc.dll
+D:\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.Optimization.dll
+D:\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.Razor.dll
+D:\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.WebPages.Deployment.dll
+D:\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.WebPages.dll
+D:\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.WebPages.Razor.dll
+D:\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\WebGrease.dll
+D:\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\Antlr3.Runtime.pdb
+D:\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\EntityFramework.xml
+D:\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\EntityFramework.SqlServer.xml
+D:\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\Microsoft.AspNet.Identity.Core.xml
+D:\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\Newtonsoft.Json.xml
+D:\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.Helpers.xml
+D:\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.Mvc.xml
+D:\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.Optimization.xml
+D:\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.Razor.xml
+D:\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.WebPages.xml
+D:\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.WebPages.Deployment.xml
+D:\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\bin\System.Web.WebPages.Razor.xml
+D:\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\obj\Debug\SmartAdminMvc.csprojResolveAssemblyReference.cache
+D:\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\obj\Debug\SmartAdminMvc.dll
+D:\_SAMPLE_LIBRARY_RESOURCES\ASP.NetMVC5_Full_Version\webapp\obj\Debug\SmartAdminMvc.pdb

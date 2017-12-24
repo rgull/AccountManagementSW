@@ -1,0 +1,142 @@
+﻿@model SmartAdminMvc.Areas.Admin.Models.addKeyPoint
+@{
+    ViewBag.Title = "DefaultEditKeyPoint";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div id="content" class="container width">
+    <div class="row center">
+
+        <div class="col-xs-12 col-sm-12 col-md-8 in_blk">
+            <div class="well no-padding">
+                <form method="post" action="#" name="logFrm" class="smart-form clientform client-form" role="form">
+                    @using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl }))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(true)
+                        <header class="left_align">
+                            Edit Key Point
+                        </header>
+
+                        <fieldset>
+                            <section class="formrow2">
+                                <label class="label">Key Point Title</label>
+                                <label class="input">
+                                    <i class="icon-append fa fa-user"></i>
+                                    @Html.TextBoxFor(m => m.name, new { @class = "form-control", @required = "required", maxlength = 90, @readonly = "readonly", placeholder = "Key Point Title" })
+                                    <b class="tooltip tooltip-top-right"><i class="fa fa-user txt-color-teal"></i> Please enter title</b>
+                                </label>
+                            </section>
+                            <section class="formrow2">
+                                <label class="label">Percentage</label>
+                                <label class="input">
+                                    <i class="icon-append fa fa-user"></i>
+                                    @Html.TextBoxFor(m => m.percentage, new { @class = "form-control", @required = "required", maxlength = 18, placeholder = "Percentage" })
+                                    <b class="tooltip tooltip-top-right"><i class="fa fa-user txt-color-teal"></i> Please enter percentage</b>
+                                </label>
+                            </section>
+                            <section class="formrow2" style="display:none;">
+                                <label class="label">Is Net Profit Key</label>
+                                <div class="checkboxgroup">
+                                    <label class="checkbox left_align">
+
+                                        @if (Model.isnetProfitKey)
+                                        {
+                                            @Html.CheckBoxFor(m => m.isnetProfitKey)
+                                        }
+                                        else
+                                        {
+                                            @Html.CheckBoxFor(m => m.isnetProfitKey, new { @disabled = "disabled" })
+                                        }
+                                        <i></i>Is Net Profit Key
+                                    </label>
+                                </div>
+                            </section>
+                            <section class="formrow2">
+                                <label class="label">Is Business Development key </label>
+                                <div class="checkboxgroup">
+                                    <label class="checkbox left_align">
+                                        @if (Model.isBusinessDevKey)
+                                        {
+                                            @Html.CheckBoxFor(m => m.isBusinessDevKey)
+                                        }
+                                        else
+                                        {
+                                            @Html.CheckBoxFor(m => m.isBusinessDevKey, new { @disabled = "disabled" })
+                                        }                                       
+                                        <i></i>Is Business Development key
+                                    </label>
+                                </div>
+                            </section>
+                            <section class="formrow2" style="display:none;">
+                                <label class="label">Status</label>
+                                <div class="checkboxgroup">
+                                    <label class="checkbox left_align">
+                                        @Html.CheckBoxFor(m => m.isActive)
+                                        <i></i>is Active
+                                    </label>
+                                </div>
+                            </section>
+                            <br />
+                          
+                            <h3 class="subttl2" style="display:none;">Selcet Line Items</h3>
+
+                            @*@for (int i = 0; i < Model.CategoryValueSelected.Count(); i++)
+                                {
+                                    <label class="checkbox left_align">
+                                        @Html.CheckBoxFor(m => Model.CategoryValueSelected[i].selected)
+                                        <i></i> @Model.CategoryValueSelected[i].name
+                                        @Html.HiddenFor(m => Model.CategoryValueSelected[i].id)
+                                        @Html.HiddenFor(m => Model.CategoryValueSelected[i].name)
+                                    </label>
+
+                                }*@
+                            @for (int j = 0; j < Model.CategorywithList.Count(); j++)
+                            {
+                                <section class="formrow2" style="display:none;">
+                                    @*<label class="label">@Html.LabelFor(m => m.CategorywithList[j].budgetTypeName, Model.CategorywithList[j].budgetTypeName)</label>*@
+                                    <label class="label">@Html.LabelFor(m => m.CategorywithList[j].categoryName, Model.CategorywithList[j].categoryName) - ( @Html.LabelFor(m => m.CategorywithList[j].budgetTypeName, Model.CategorywithList[j].budgetTypeName) )</label>
+                                    @Html.HiddenFor(m => m.CategorywithList[j].categoryId)
+                                    @Html.HiddenFor(m => m.CategorywithList[j].budgetTypeId)
+                                    <div class="checkboxgroup">
+                                        @for (int i = 0; i < Model.CategorywithList[j].CategoryValueList.Count(); i++)
+                                        {
+                                            <label class="checkbox left_align">
+                                                @if (Model.CategorywithList[j].CategoryValueList[i].selected)
+                                                {
+                                                    @Html.CheckBoxFor(m => Model.CategorywithList[j].CategoryValueList[i].selected)
+                                                }
+                                                else
+                                                {
+                                                    @Html.CheckBoxFor(m => Model.CategorywithList[j].CategoryValueList[i].selected)
+                                                }
+
+                                                <i></i> @Model.CategorywithList[j].CategoryValueList[i].name
+                                                @Html.HiddenFor(m => Model.CategorywithList[j].CategoryValueList[i].id)
+                                                @Html.HiddenFor(m => Model.CategorywithList[j].CategoryValueList[i].name)
+                                            </label>
+                                        }
+                                    </div>
+                                </section>
+
+                            }
+
+
+                        </fieldset>
+                        <footer>
+                            @*<button class="btn btn-white" type="button" onclick="@("location.href='" + Url.Action("DefaultKeyPointManagement", "KeyPoint") + "'")">Cancel</button>*@
+                            <button class="btn btn-white" type="button" onclick="@("location.href='/admin/KeyPoint/DefaultKeyPointManagement?page=" + HttpContext.Current.Request.QueryString["page"] + "'")">Cancel</button>
+                              <button type="submit" class="btn btn-primary">
+                                Update
+                            </button>
+                        </footer>
+                    }
+                </form>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a4e183050df34e7e933280000ecbe19f" Name="Diagram1">
+        <EntityTypeShape EntityType="AccountManagement_dbEntities.C__MigrationHistory" Width="1.5" PointX="7.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountManagement_dbEntities.AspNetRole" Width="1.5" PointX="8.75" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountManagement_dbEntities.AspNetUserClaim" Width="1.5" PointX="13.25" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountManagement_dbEntities.AspNetUserLogin" Width="1.5" PointX="13.25" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountManagement_dbEntities.AspNetUser" Width="1.5" PointX="11" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountManagement_dbEntities.tblAdmin" Width="1.5" PointX="9.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountManagement_dbEntities.tblBudgetType" Width="1.5" PointX="0.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountManagement_dbEntities.tblCategory" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountManagement_dbEntities.tblCompany" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountManagement_dbEntities.tblcompanyCategory" Width="1.5" PointX="5.25" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountManagement_dbEntities.tblExpectedBudgetLine" Width="1.5" PointX="8.25" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountManagement_dbEntities.tblRealBudget" Width="1.5" PointX="5.25" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountManagement_dbEntities.tblReportType" Width="1.5" PointX="6" PointY="10.5" IsExpanded="true" />
+        <AssociationConnector Association="AccountManagement_dbEntities.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountManagement_dbEntities.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountManagement_dbEntities.FK__tblCatego__budge__351DDF8C" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountManagement_dbEntities.FK__tblExpect__budge__37FA4C37" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountManagement_dbEntities.FK__tblRealBu__budge__3BCADD1B" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountManagement_dbEntities.FK__tblcompan__categ__361203C5" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountManagement_dbEntities.FK__tblExpect__categ__38EE7070" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountManagement_dbEntities.FK__tblRealBu__categ__3CBF0154" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountManagement_dbEntities.FK__tblcompan__compa__370627FE" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountManagement_dbEntities.FK_RealBudget_company" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountManagement_dbEntities.FK_tblExpect_company" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountManagement_dbEntities.FK__tblExpect__repor__39E294A9" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountManagement_dbEntities.AspNetUserRoles" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="AccountManagement_dbEntities.C__MigrationHistory1" Width="1.5" PointX="0.75" PointY="10.75" />
+        <EntityTypeShape EntityType="AccountManagement_dbEntities.AspNetRole1" Width="1.5" PointX="10.75" PointY="6.5" />
+        <EntityTypeShape EntityType="AccountManagement_dbEntities.AspNetUserClaim1" Width="1.5" PointX="15.25" PointY="5" />
+        <EntityTypeShape EntityType="AccountManagement_dbEntities.AspNetUserLogin1" Width="1.5" PointX="15.25" PointY="7.75" />
+        <EntityTypeShape EntityType="AccountManagement_dbEntities.AspNetUser1" Width="1.5" PointX="13" PointY="5.375" />
+        <AssociationConnector Association="AccountManagement_dbEntities.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId1" />
+        <AssociationConnector Association="AccountManagement_dbEntities.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId1" />
+        <AssociationConnector Association="AccountManagement_dbEntities.AspNetUserRoles1" />
+        <EntityTypeShape EntityType="AccountManagement_dbEntities.tblContentPage" Width="1.5" PointX="12.375" PointY="0.75" />
+        <EntityTypeShape EntityType="AccountManagement_dbEntities.tblKeyPointBudgetLine" Width="1.5" PointX="7.5" PointY="15" />
+        <EntityTypeShape EntityType="AccountManagement_dbEntities.tblKeyPointGroup" Width="1.5" PointX="5.25" PointY="13.625" />
+        <AssociationConnector Association="AccountManagement_dbEntities.FK_tblKeyPointBudgetLine_tblCategory" />
+        <AssociationConnector Association="AccountManagement_dbEntities.FK__tblKeyPoi__compa__70FDBF69" />
+        <AssociationConnector Association="AccountManagement_dbEntities.FK_tblKeyPointBudgetLine_tblKeyPointGroup" />
+        <EntityTypeShape EntityType="AccountManagement_dbEntities.tblRealCarCount" Width="1.5" PointX="5.25" PointY="0.75" />
+        <AssociationConnector Association="AccountManagement_dbEntities.FK_tblRealCarCounts_tblCompany" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

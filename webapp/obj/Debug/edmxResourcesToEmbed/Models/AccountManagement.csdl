@@ -1,0 +1,632 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AccountManagement_dbEntities" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="C__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ContextKey" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Model" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="ProductVersion" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="AspNetUsers" Relationship="Self.AspNetUserRoles" FromRole="AspNetRoles" ToRole="AspNetUsers" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaim">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUser" Relationship="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUserClaims" ToRole="AspNetUsers" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogin">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="LoginProvider" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProviderKey" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="AspNetUser" Relationship="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUserLogins" ToRole="AspNetUsers" />
+  </EntityType>
+  <EntityType Name="AspNetUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
+    <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="AspNetUserClaims" Relationship="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserClaims" />
+    <NavigationProperty Name="AspNetUserLogins" Relationship="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserLogins" />
+    <NavigationProperty Name="AspNetRoles" Relationship="Self.AspNetUserRoles" FromRole="AspNetUsers" ToRole="AspNetRoles" />
+  </EntityType>
+  <EntityType Name="tblAdmin">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="emailId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="createDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="updateDate" Type="DateTime" Precision="3" />
+    <Property Name="isActive" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="tblBudgetType">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="rank" Type="Int32" Nullable="false" />
+    <Property Name="createDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="isActive" Type="Boolean" />
+    <NavigationProperty Name="tblCategories" Relationship="Self.FK__tblCatego__budge__351DDF8C" FromRole="tblBudgetType" ToRole="tblCategory" />
+    <NavigationProperty Name="tblExpectedBudgetLines" Relationship="Self.FK__tblExpect__budge__37FA4C37" FromRole="tblBudgetType" ToRole="tblExpectedBudgetLine" />
+    <NavigationProperty Name="tblRealBudgets" Relationship="Self.FK__tblRealBu__budge__3BCADD1B" FromRole="tblBudgetType" ToRole="tblRealBudget" />
+  </EntityType>
+  <EntityType Name="tblCategory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="budgetTypeId" Type="Int32" Nullable="false" />
+    <Property Name="parentId" Type="Int32" Nullable="false" />
+    <Property Name="createDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="updateDate" Type="DateTime" Precision="3" />
+    <Property Name="isActive" Type="Boolean" />
+    <NavigationProperty Name="tblBudgetType" Relationship="Self.FK__tblCatego__budge__351DDF8C" FromRole="tblCategory" ToRole="tblBudgetType" />
+    <NavigationProperty Name="tblcompanyCategories" Relationship="Self.FK__tblcompan__categ__361203C5" FromRole="tblCategory" ToRole="tblcompanyCategory" />
+    <NavigationProperty Name="tblExpectedBudgetLines" Relationship="Self.FK__tblExpect__categ__38EE7070" FromRole="tblCategory" ToRole="tblExpectedBudgetLine" />
+    <NavigationProperty Name="tblRealBudgets" Relationship="Self.FK__tblRealBu__categ__3CBF0154" FromRole="tblCategory" ToRole="tblRealBudget" />
+    <NavigationProperty Name="tblKeyPointBudgetLines" Relationship="AccountManagement_dbEntities.FK_tblKeyPointBudgetLine_tblCategory" FromRole="tblCategory" ToRole="tblKeyPointBudgetLine" />
+  </EntityType>
+  <EntityType Name="tblCompany">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="emailId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="contactName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="contactNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="address" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="createDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="updateDate" Type="DateTime" Precision="3" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="isDeleted" Type="Boolean" />
+    <NavigationProperty Name="tblcompanyCategories" Relationship="Self.FK__tblcompan__compa__370627FE" FromRole="tblCompany" ToRole="tblcompanyCategory" />
+    <NavigationProperty Name="tblRealBudgets" Relationship="Self.FK_RealBudget_company" FromRole="tblCompany" ToRole="tblRealBudget" />
+    <NavigationProperty Name="tblExpectedBudgetLines" Relationship="Self.FK_tblExpect_company" FromRole="tblCompany" ToRole="tblExpectedBudgetLine" />
+    <Property Name="city" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="state" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="country" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tblKeyPointGroups" Relationship="AccountManagement_dbEntities.FK__tblKeyPoi__compa__70FDBF69" FromRole="tblCompany" ToRole="tblKeyPointGroup" />
+    <NavigationProperty Name="tblRealCarCounts" Relationship="AccountManagement_dbEntities.FK_tblRealCarCounts_tblCompany" FromRole="tblCompany" ToRole="tblRealCarCount" />
+  </EntityType>
+  <EntityType Name="tblcompanyCategory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="companyId" Type="Int32" Nullable="false" />
+    <Property Name="categoryId" Type="Int32" Nullable="false" />
+    <Property Name="createDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="isActive" Type="Boolean" />
+    <NavigationProperty Name="tblCategory" Relationship="Self.FK__tblcompan__categ__361203C5" FromRole="tblcompanyCategory" ToRole="tblCategory" />
+    <NavigationProperty Name="tblCompany" Relationship="Self.FK__tblcompan__compa__370627FE" FromRole="tblcompanyCategory" ToRole="tblCompany" />
+  </EntityType>
+  <EntityType Name="tblExpectedBudgetLine">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="budgetTypeId" Type="Int32" Nullable="false" />
+    <Property Name="categoryId" Type="Int32" Nullable="false" />
+    <Property Name="date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="reportType" Type="Int32" Nullable="false" />
+    <Property Name="budget" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="createDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="updateDate" Type="DateTime" Precision="3" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="companyId" Type="Int32" />
+    <NavigationProperty Name="tblBudgetType" Relationship="Self.FK__tblExpect__budge__37FA4C37" FromRole="tblExpectedBudgetLine" ToRole="tblBudgetType" />
+    <NavigationProperty Name="tblCategory" Relationship="Self.FK__tblExpect__categ__38EE7070" FromRole="tblExpectedBudgetLine" ToRole="tblCategory" />
+    <NavigationProperty Name="tblCompany" Relationship="Self.FK_tblExpect_company" FromRole="tblExpectedBudgetLine" ToRole="tblCompany" />
+    <NavigationProperty Name="tblReportType" Relationship="Self.FK__tblExpect__repor__39E294A9" FromRole="tblExpectedBudgetLine" ToRole="tblReportType" />
+    <Property Name="isAddOnceInMonth" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="tblRealBudget">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="budgetTypeId" Type="Int32" Nullable="false" />
+    <Property Name="categoryId" Type="Int32" Nullable="false" />
+    <Property Name="date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="budget" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="createDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="updateDate" Type="DateTime" Precision="3" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="companyId" Type="Int32" />
+    <NavigationProperty Name="tblBudgetType" Relationship="Self.FK__tblRealBu__budge__3BCADD1B" FromRole="tblRealBudget" ToRole="tblBudgetType" />
+    <NavigationProperty Name="tblCategory" Relationship="Self.FK__tblRealBu__categ__3CBF0154" FromRole="tblRealBudget" ToRole="tblCategory" />
+    <NavigationProperty Name="tblCompany" Relationship="Self.FK_RealBudget_company" FromRole="tblRealBudget" ToRole="tblCompany" />
+  </EntityType>
+  <EntityType Name="tblReportType">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="rank" Type="Int32" Nullable="false" />
+    <Property Name="createDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="isActive" Type="Boolean" />
+    <NavigationProperty Name="tblExpectedBudgetLines" Relationship="Self.FK__tblExpect__repor__39E294A9" FromRole="tblReportType" ToRole="tblExpectedBudgetLine" />
+  </EntityType>
+  <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserClaims" Type="Self.AspNetUserClaim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserClaims">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserLogins" Type="Self.AspNetUserLogin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserLogins">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblCatego__budge__351DDF8C">
+    <End Role="tblBudgetType" Type="Self.tblBudgetType" Multiplicity="1" />
+    <End Role="tblCategory" Type="Self.tblCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblBudgetType">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblCategory">
+        <PropertyRef Name="budgetTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblExpect__budge__37FA4C37">
+    <End Role="tblBudgetType" Type="Self.tblBudgetType" Multiplicity="1" />
+    <End Role="tblExpectedBudgetLine" Type="Self.tblExpectedBudgetLine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblBudgetType">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblExpectedBudgetLine">
+        <PropertyRef Name="budgetTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblRealBu__budge__3BCADD1B">
+    <End Role="tblBudgetType" Type="Self.tblBudgetType" Multiplicity="1" />
+    <End Role="tblRealBudget" Type="Self.tblRealBudget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblBudgetType">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblRealBudget">
+        <PropertyRef Name="budgetTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblcompan__categ__361203C5">
+    <End Role="tblCategory" Type="Self.tblCategory" Multiplicity="1" />
+    <End Role="tblcompanyCategory" Type="Self.tblcompanyCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCategory">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblcompanyCategory">
+        <PropertyRef Name="categoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblExpect__categ__38EE7070">
+    <End Role="tblCategory" Type="Self.tblCategory" Multiplicity="1" />
+    <End Role="tblExpectedBudgetLine" Type="Self.tblExpectedBudgetLine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCategory">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblExpectedBudgetLine">
+        <PropertyRef Name="categoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblRealBu__categ__3CBF0154">
+    <End Role="tblCategory" Type="Self.tblCategory" Multiplicity="1" />
+    <End Role="tblRealBudget" Type="Self.tblRealBudget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCategory">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblRealBudget">
+        <PropertyRef Name="categoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblcompan__compa__370627FE">
+    <End Role="tblCompany" Type="Self.tblCompany" Multiplicity="1" />
+    <End Role="tblcompanyCategory" Type="Self.tblcompanyCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCompany">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblcompanyCategory">
+        <PropertyRef Name="companyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RealBudget_company">
+    <End Role="tblCompany" Type="Self.tblCompany" Multiplicity="0..1" />
+    <End Role="tblRealBudget" Type="Self.tblRealBudget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCompany">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblRealBudget">
+        <PropertyRef Name="companyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblExpect_company">
+    <End Role="tblCompany" Type="Self.tblCompany" Multiplicity="0..1" />
+    <End Role="tblExpectedBudgetLine" Type="Self.tblExpectedBudgetLine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCompany">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblExpectedBudgetLine">
+        <PropertyRef Name="companyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblExpect__repor__39E294A9">
+    <End Role="tblReportType" Type="Self.tblReportType" Multiplicity="1" />
+    <End Role="tblExpectedBudgetLine" Type="Self.tblExpectedBudgetLine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblReportType">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblExpectedBudgetLine">
+        <PropertyRef Name="reportType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AspNetUserRoles">
+    <End Role="AspNetRoles" Type="Self.AspNetRole" Multiplicity="*" />
+    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="managementsoftwaredbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="C__MigrationHistory" EntityType="Self.C__MigrationHistory" />
+    <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRole" />
+    <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaim" />
+    <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogin" />
+    <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUser" />
+    <EntitySet Name="tblAdmins" EntityType="Self.tblAdmin" />
+    <EntitySet Name="tblBudgetTypes" EntityType="Self.tblBudgetType" />
+    <EntitySet Name="tblCategories" EntityType="Self.tblCategory" />
+    <EntitySet Name="tblCompanies" EntityType="Self.tblCompany" />
+    <EntitySet Name="tblcompanyCategories" EntityType="Self.tblcompanyCategory" />
+    <EntitySet Name="tblExpectedBudgetLines" EntityType="Self.tblExpectedBudgetLine" />
+    <EntitySet Name="tblRealBudgets" EntityType="Self.tblRealBudget" />
+    <EntitySet Name="tblReportTypes" EntityType="Self.tblReportType" />
+    <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblCatego__budge__351DDF8C" Association="Self.FK__tblCatego__budge__351DDF8C">
+      <End Role="tblBudgetType" EntitySet="tblBudgetTypes" />
+      <End Role="tblCategory" EntitySet="tblCategories" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblExpect__budge__37FA4C37" Association="Self.FK__tblExpect__budge__37FA4C37">
+      <End Role="tblBudgetType" EntitySet="tblBudgetTypes" />
+      <End Role="tblExpectedBudgetLine" EntitySet="tblExpectedBudgetLines" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblRealBu__budge__3BCADD1B" Association="Self.FK__tblRealBu__budge__3BCADD1B">
+      <End Role="tblBudgetType" EntitySet="tblBudgetTypes" />
+      <End Role="tblRealBudget" EntitySet="tblRealBudgets" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblcompan__categ__361203C5" Association="Self.FK__tblcompan__categ__361203C5">
+      <End Role="tblCategory" EntitySet="tblCategories" />
+      <End Role="tblcompanyCategory" EntitySet="tblcompanyCategories" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblExpect__categ__38EE7070" Association="Self.FK__tblExpect__categ__38EE7070">
+      <End Role="tblCategory" EntitySet="tblCategories" />
+      <End Role="tblExpectedBudgetLine" EntitySet="tblExpectedBudgetLines" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblRealBu__categ__3CBF0154" Association="Self.FK__tblRealBu__categ__3CBF0154">
+      <End Role="tblCategory" EntitySet="tblCategories" />
+      <End Role="tblRealBudget" EntitySet="tblRealBudgets" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblcompan__compa__370627FE" Association="Self.FK__tblcompan__compa__370627FE">
+      <End Role="tblCompany" EntitySet="tblCompanies" />
+      <End Role="tblcompanyCategory" EntitySet="tblcompanyCategories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RealBudget_company" Association="Self.FK_RealBudget_company">
+      <End Role="tblCompany" EntitySet="tblCompanies" />
+      <End Role="tblRealBudget" EntitySet="tblRealBudgets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblExpect_company" Association="Self.FK_tblExpect_company">
+      <End Role="tblCompany" EntitySet="tblCompanies" />
+      <End Role="tblExpectedBudgetLine" EntitySet="tblExpectedBudgetLines" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblExpect__repor__39E294A9" Association="Self.FK__tblExpect__repor__39E294A9">
+      <End Role="tblReportType" EntitySet="tblReportTypes" />
+      <End Role="tblExpectedBudgetLine" EntitySet="tblExpectedBudgetLines" />
+    </AssociationSet>
+    <AssociationSet Name="AspNetUserRoles" Association="Self.AspNetUserRoles">
+      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+    </AssociationSet>
+    <EntitySet Name="C__MigrationHistory1" EntityType="AccountManagement_dbEntities.C__MigrationHistory1" />
+    <EntitySet Name="AspNetRole1" EntityType="AccountManagement_dbEntities.AspNetRole1" />
+    <EntitySet Name="AspNetUserClaim1" EntityType="AccountManagement_dbEntities.AspNetUserClaim1" />
+    <EntitySet Name="AspNetUserLogin1" EntityType="AccountManagement_dbEntities.AspNetUserLogin1" />
+    <EntitySet Name="AspNetUser1" EntityType="AccountManagement_dbEntities.AspNetUser1" />
+    <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId1" Association="AccountManagement_dbEntities.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId1">
+      <End Role="AspNetUser1" EntitySet="AspNetUser1" />
+      <End Role="AspNetUserClaim1" EntitySet="AspNetUserClaim1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId1" Association="AccountManagement_dbEntities.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId1">
+      <End Role="AspNetUser1" EntitySet="AspNetUser1" />
+      <End Role="AspNetUserLogin1" EntitySet="AspNetUserLogin1" />
+    </AssociationSet>
+    <AssociationSet Name="AspNetUserRoles1" Association="AccountManagement_dbEntities.AspNetUserRoles1">
+      <End Role="AspNetRole1" EntitySet="AspNetRole1" />
+      <End Role="AspNetUser1" EntitySet="AspNetUser1" />
+    </AssociationSet>
+    <EntitySet Name="tblContentPages" EntityType="AccountManagement_dbEntities.tblContentPage" />
+    <EntitySet Name="tblKeyPointBudgetLines" EntityType="AccountManagement_dbEntities.tblKeyPointBudgetLine" />
+    <EntitySet Name="tblKeyPointGroups" EntityType="AccountManagement_dbEntities.tblKeyPointGroup" />
+    <AssociationSet Name="FK_tblKeyPointBudgetLine_tblCategory" Association="AccountManagement_dbEntities.FK_tblKeyPointBudgetLine_tblCategory">
+      <End Role="tblCategory" EntitySet="tblCategories" />
+      <End Role="tblKeyPointBudgetLine" EntitySet="tblKeyPointBudgetLines" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblKeyPoi__compa__70FDBF69" Association="AccountManagement_dbEntities.FK__tblKeyPoi__compa__70FDBF69">
+      <End Role="tblCompany" EntitySet="tblCompanies" />
+      <End Role="tblKeyPointGroup" EntitySet="tblKeyPointGroups" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblKeyPointBudgetLine_tblKeyPointGroup" Association="AccountManagement_dbEntities.FK_tblKeyPointBudgetLine_tblKeyPointGroup">
+      <End Role="tblKeyPointGroup" EntitySet="tblKeyPointGroups" />
+      <End Role="tblKeyPointBudgetLine" EntitySet="tblKeyPointBudgetLines" />
+    </AssociationSet>
+    <EntitySet Name="tblRealCarCounts" EntityType="AccountManagement_dbEntities.tblRealCarCount" />
+    <AssociationSet Name="FK_tblRealCarCounts_tblCompany" Association="AccountManagement_dbEntities.FK_tblRealCarCounts_tblCompany">
+      <End Role="tblCompany" EntitySet="tblCompanies" />
+      <End Role="tblRealCarCount" EntitySet="tblRealCarCounts" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="C__MigrationHistory1">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="ContextKey" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="Model" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Name="ProductVersion" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="AspNetRole1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUsers" Relationship="AccountManagement_dbEntities.AspNetUserRoles1" FromRole="AspNetRole1" ToRole="AspNetUser1" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaim1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUser" Relationship="AccountManagement_dbEntities.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId1" FromRole="AspNetUserClaim1" ToRole="AspNetUser1" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogin1">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="LoginProvider" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="ProviderKey" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUser" Relationship="AccountManagement_dbEntities.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId1" FromRole="AspNetUserLogin1" ToRole="AspNetUser1" />
+  </EntityType>
+  <EntityType Name="AspNetUser1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
+    <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUserClaims" Relationship="AccountManagement_dbEntities.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId1" FromRole="AspNetUser1" ToRole="AspNetUserClaim1" />
+    <NavigationProperty Name="AspNetUserLogins" Relationship="AccountManagement_dbEntities.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId1" FromRole="AspNetUser1" ToRole="AspNetUserLogin1" />
+    <NavigationProperty Name="AspNetRoles" Relationship="AccountManagement_dbEntities.AspNetUserRoles1" FromRole="AspNetUser1" ToRole="AspNetRole1" />
+  </EntityType>
+  <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId1">
+    <End Type="AccountManagement_dbEntities.AspNetUser1" Role="AspNetUser1" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="AccountManagement_dbEntities.AspNetUserClaim1" Role="AspNetUserClaim1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser1">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserClaim1">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId1">
+    <End Type="AccountManagement_dbEntities.AspNetUser1" Role="AspNetUser1" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="AccountManagement_dbEntities.AspNetUserLogin1" Role="AspNetUserLogin1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser1">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserLogin1">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AspNetUserRoles1">
+    <End Type="AccountManagement_dbEntities.AspNetRole1" Role="AspNetRole1" Multiplicity="*" />
+    <End Type="AccountManagement_dbEntities.AspNetUser1" Role="AspNetUser1" Multiplicity="*" />
+  </Association>
+  <EntityType Name="tblContentPage">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="descpriction" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="createDate" Type="DateTime" Precision="3" />
+    <Property Name="updateDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblKeyPointBudgetLine">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="categoryId" Type="Int32" />
+    <Property Name="keypointId" Type="Int32" />
+    <Property Name="creatDate" Type="DateTime" Precision="3" />
+    <Property Name="isActive" Type="Boolean" />
+    <NavigationProperty Name="tblCategory" Relationship="AccountManagement_dbEntities.FK_tblKeyPointBudgetLine_tblCategory" FromRole="tblKeyPointBudgetLine" ToRole="tblCategory" />
+    <NavigationProperty Name="tblKeyPointGroup" Relationship="AccountManagement_dbEntities.FK_tblKeyPointBudgetLine_tblKeyPointGroup" FromRole="tblKeyPointBudgetLine" ToRole="tblKeyPointGroup" />
+  </EntityType>
+  <EntityType Name="tblKeyPointGroup">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="percentage" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="createDate" Type="DateTime" Precision="3" />
+    <Property Name="updateDate" Type="DateTime" Precision="3" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="companyId" Type="Int32" />
+    <NavigationProperty Name="tblCompany" Relationship="AccountManagement_dbEntities.FK__tblKeyPoi__compa__70FDBF69" FromRole="tblKeyPointGroup" ToRole="tblCompany" />
+    <NavigationProperty Name="tblKeyPointBudgetLines" Relationship="AccountManagement_dbEntities.FK_tblKeyPointBudgetLine_tblKeyPointGroup" FromRole="tblKeyPointGroup" ToRole="tblKeyPointBudgetLine" />
+    <Property Name="isnetProfitKey" Type="Boolean" />
+    <Property Name="isBusinessDevKey" Type="Boolean" />
+  </EntityType>
+  <Association Name="FK_tblKeyPointBudgetLine_tblCategory">
+    <End Type="AccountManagement_dbEntities.tblCategory" Role="tblCategory" Multiplicity="0..1" />
+    <End Type="AccountManagement_dbEntities.tblKeyPointBudgetLine" Role="tblKeyPointBudgetLine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCategory">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblKeyPointBudgetLine">
+        <PropertyRef Name="categoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblKeyPoi__compa__70FDBF69">
+    <End Type="AccountManagement_dbEntities.tblCompany" Role="tblCompany" Multiplicity="0..1" />
+    <End Type="AccountManagement_dbEntities.tblKeyPointGroup" Role="tblKeyPointGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCompany">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblKeyPointGroup">
+        <PropertyRef Name="companyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblKeyPointBudgetLine_tblKeyPointGroup">
+    <End Type="AccountManagement_dbEntities.tblKeyPointGroup" Role="tblKeyPointGroup" Multiplicity="0..1" />
+    <End Type="AccountManagement_dbEntities.tblKeyPointBudgetLine" Role="tblKeyPointBudgetLine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblKeyPointGroup">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblKeyPointBudgetLine">
+        <PropertyRef Name="keypointId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tblRealCarCount">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="date" Type="DateTime" Precision="0" />
+    <Property Name="carCounts" Type="Int32" />
+    <Property Name="compnayId" Type="Int32" />
+    <NavigationProperty Name="tblCompany" Relationship="AccountManagement_dbEntities.FK_tblRealCarCounts_tblCompany" FromRole="tblRealCarCount" ToRole="tblCompany" />
+  </EntityType>
+  <Association Name="FK_tblRealCarCounts_tblCompany">
+    <End Type="AccountManagement_dbEntities.tblCompany" Role="tblCompany" Multiplicity="0..1" />
+    <End Type="AccountManagement_dbEntities.tblRealCarCount" Role="tblRealCarCount" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCompany">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblRealCarCount">
+        <PropertyRef Name="compnayId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

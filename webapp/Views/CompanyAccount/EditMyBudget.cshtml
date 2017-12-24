@@ -1,0 +1,122 @@
+﻿@model SmartAdminMvc.Models.Mybudget
+@{
+    ViewBag.Title = "EditMyBudget";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/BoostrapThemes/css/jquery-ui.css" rel="stylesheet" />
+<div id="content" class="container width clientfrm">
+    <div class="row center">
+
+        <div class="col-xs-12 col-sm-12 col-md-8 in_blk">
+            <div class="well no-padding">
+                <form method="post" action="#" name="logFrm" class="smart-form clientform client-form" role="form">
+                    @using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl }))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(true)
+                        <header class="left_align">
+                           Edit My Income/Expense
+                        </header>
+
+                        <fieldset>
+                            <section class="calendr">
+                                <label class="label"> Select Date</label>
+                                <div class="input">
+                                    <i class="icon-append fa fa-calendar"></i>
+                                    @*@Html.TextBoxFor(model => model.date, new { @class = "form-control datepicker", @required = "required", placeholder = "Expected date here..." })*@
+                                    @Html.TextBoxFor(m => m.selectedDate, new { @class = "form-control datepicker3", @readonly = "readonly", id = "selectedDate", @required = "required", type = "datetime"})
+                                    @*<input id="finishdate" class="form-control hasDatepicker" type="text" placeholder="Expected finish date" name="finishdate">*@
+                                   </div>
+                            </section>
+                            <section class="calendr">
+                                <label class="label"> Car Counts</label>
+                                <div class="input">
+                                    <i></i>
+                                    @*@Html.TextBoxFor(model => model.date, new { @class = "form-control datepicker", @required = "required", placeholder = "Expected date here..." })*@                                    
+                                    @Html.TextBoxFor(m => m.carCounts, new { @class = "form-control", id = "carcounts", @required = "required" })
+                                    @*<input id="finishdate" class="form-control hasDatepicker" type="text" placeholder="Expected finish date" name="finishdate">*@
+                                    @Html.HiddenFor(m => m.carCountId)
+                                </div>
+                            </section>
+                            @for (int j = 0; j < Model.MyValuebudgetFullList.Count(); j++)
+                            {
+                                <section>
+                                    @*<label class="label">@Html.LabelFor(m => m.MyValuebudgetFullList[j].budgetTypeName, Model.MyValuebudgetFullList[j].budgetTypeName)</label>
+                                    <label class="label">@Html.LabelFor(m => m.MyValuebudgetFullList[j].categoryName, Model.MyValuebudgetFullList[j].categoryName)</label>*@
+                                    <h3 class="subttl">@Html.LabelFor(m => m.MyValuebudgetFullList[j].categoryName, Model.MyValuebudgetFullList[j].categoryName) - ( @Html.LabelFor(m => m.MyValuebudgetFullList[j].budgetTypeName, Model.MyValuebudgetFullList[j].budgetTypeName) )</h3>
+                                    @Html.HiddenFor(m => m.MyValuebudgetFullList[j].categoryId)
+                                    @Html.HiddenFor(m => m.MyValuebudgetFullList[j].budgetTypeId)
+                                    @*<label class="input">*@
+
+                                    @for (int i = 0; i < Model.MyValuebudgetFullList[j].MyValueParameterList.Count(); i++)
+                                    {
+                                        <div class="formrow">
+                                            
+                                                @Html.LabelFor(m => m.MyValuebudgetFullList[j].MyValueParameterList[i].name, Model.MyValuebudgetFullList[j].MyValueParameterList[i].name)
+                                            @*(@System.Configuration.ConfigurationManager.AppSettings["CurrencySymbol"].ToString())*@
+                                                <i></i>@Html.TextBoxFor(m => m.MyValuebudgetFullList[j].MyValueParameterList[i].budget, new { @class = "form-control", id = "BugetValue", @required = "required" })
+                                                @Html.HiddenFor(m => m.MyValuebudgetFullList[j].MyValueParameterList[i].id)
+                                                @Html.HiddenFor(m => m.MyValuebudgetFullList[j].MyValueParameterList[i].MyBudgetid)
+                                                @Html.HiddenFor(m => m.MyValuebudgetFullList[j].MyValueParameterList[i].reportType)
+                                           
+                                        </div>
+                                    }
+
+                                            @*</label>*@
+</section>
+
+                            }
+
+                           
+                            @*<div class="inline-group">
+                                    <label class="radio">
+                                        <input type="radio" name="radio-inline" checked="">
+                                        <i></i>Visa
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="radio-inline">
+                                        <i></i>MasterCard
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="radio-inline">
+                                        <i></i>American Express
+                                    </label>
+                                </div>*@
+
+                            @*foreach(var answer in Model.Subjects[i].Questions[j].PossibleAnswers )
+                                {
+                                <div>
+                                    @Html.RadioButtonFor(m => m.Subjects[i].Questions[j].SelectedAnswer, answer.ID, new { id = answer.ID })
+                                    <label for="@answer.ID">@answer.Text</label>
+                                </div>
+                                }*@
+
+                        </fieldset>
+                        <footer>
+                            @*<button class="btn btn-white" type="button" onclick="@("location.href='" + Url.Action("MyBudgetView", "CompanyAccount") + "'")">Cancel</button>*@
+                            <button class="btn btn-white" type="button" onclick="@("location.href='/CompanyAccount/MyBudgetView?page=" + HttpContext.Current.Request.QueryString["page"] + "'")">Cancel</button>
+                            <button type="submit" id="btnsave" class="btn btn-primary">
+                               Update
+                            </button>
+                        </footer>
+                    }
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+@*@section pagespecific {
+    <script type="text/javascript">
+     $(function () { // will trigger when the document is ready
+       $('.datepicker3').datepicker({
+
+           dateFormat: 'dd/mm/yy',
+
+           onSelect: function () { }
+       }); //Initialise any date pickers
+     });
+    </script>
+}*@
+
+

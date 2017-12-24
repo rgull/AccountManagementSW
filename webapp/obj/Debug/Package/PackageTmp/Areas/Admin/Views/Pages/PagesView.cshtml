@@ -1,0 +1,189 @@
+﻿@*@model List<Primalcustompro.Models.Title>*@
+@{
+    ViewBag.Title = "PagesView";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@if (Request.QueryString["success"] != null)
+{
+    string msg = Request.QueryString["success"].ToString();
+    <div class="grid_12">
+        <div class="message success ">
+            <p>
+                <img src="~/Content/themes/img/accept.jpg" style="float: left; margin: 1px 7px 1px 0px;" />
+                <label>@msg</label>
+            </p>
+        </div>
+    </div>
+}
+
+@if (Request.QueryString["value1"] != null)
+{
+    <div class="grid_12">
+        <div class="message success ">
+            <p>
+                <img src="~/Content/themes/img/accept.jpg" style="float: left; margin: 1px 7px 1px 0px;" />
+                Content added successfully.
+            </p>
+        </div>
+    </div>
+}
+@if (Request.QueryString["editvalue1"] != null)
+{
+    <div class="grid_12">
+        <div class="message success ">
+            <p>
+                <img src="~/Content/themes/img/accept.jpg" style="float: left; margin: 1px 7px 1px 0px;" />
+                Content updated successfully.
+            </p>
+        </div>
+    </div>
+}
+
+@*<link href="~/Content/BoostrapThemes/css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
+<link href="~/Content/BoostrapThemes/css/plugins/dataTables/dataTables.responsive.css" rel="stylesheet" />
+<link href="~/Content/BoostrapThemes/css/plugins/dataTables/dataTables.tableTools.min.css" rel="stylesheet" />*@
+<div id="content">
+    <button class="btn btn-primary" type="button" onclick="@("location.href='" + Url.Action("AddPages", "Pages") + "'")">Add</button>
+    <section id="widget-grid" class="">
+
+        <!-- row -->
+        <div class="row">
+
+            @using (Html.BeginForm("PagesView", null, FormMethod.Get))
+            {
+                <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <!-- Widget ID (each widget will need unique ID)-->
+                    <div class="jarviswidget jarviswidget-color-blueDark" id="wid-id-2" data-widget-editbutton="false">
+                        <!-- widget options:
+                        usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+
+                        data-widget-colorbutton="false"
+                        data-widget-editbutton="false"
+                        data-widget-togglebutton="false"
+                        data-widget-deletebutton="false"
+                        data-widget-fullscreenbutton="false"
+                        data-widget-custombutton="false"
+                        data-widget-collapsed="true"
+                        data-widget-sortable="false"
+
+                        -->
+                        <header>
+                            <span class="widget-icon"> <i class="fa fa-table"></i> </span>
+                            <h2>Content Management </h2>
+
+                        </header>
+
+                        <!-- widget div-->
+                        <div>
+                            <!-- widget edit box -->
+                            <div class="jarviswidget-editbox">
+                                <!-- This area used as dropdown edit box -->
+
+                            </div>
+                            <!-- end widget edit box -->
+                            <!-- widget content -->
+                            <div class="widget-body no-padding">
+                                <input type="text"
+                                       name="filter"
+                                       value="@ViewBag.filter"
+                                       class="form-control search-query inputwidth"
+                                       style="display: inline"
+                                       placeholder="Search by Content Name" />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary butpart" type="submit">Search</button>
+                                </span>
+                                @{
+                                    var grid = new WebGrid(
+                                                canPage: true,
+                                                rowsPerPage: Model.PageSize,
+                                                canSort: true,
+                                                ajaxUpdateContainerId: "grid");
+
+                                    grid.Bind(Model.Content, rowCount: Model.TotalRecords, autoSortAndPage: false);
+                                    grid.Pager(WebGridPagerModes.All);
+
+                                    @grid.GetHtml(htmlAttributes: new { id = "grid" },   // id for ajaxUpdateContainerId parameter
+            fillEmptyRows: false,
+            tableStyle: "table table-striped table-bordered table-hover",
+            mode: WebGridPagerModes.All,
+            columns: grid.Columns(
+              grid.Column("title", "Content Name"),
+              grid.Column("isactive", "Status"),
+              //grid.Column("Currencyname", "Currency"),
+              grid.Column(header: "Action", canSort: false, style: "action",
+                format: @<text>
+                                @if (Request.QueryString["page"] != null)
+                                {
+                                    @Html.Raw("<a class=\"tooltip-success\" data-rel=\"tooltip\" title=\"Edit\" data-modal='' href='/admin/Pages/PagesEdit/" + item.id + "?page = " + Request.QueryString["page"].ToString() + "' id='" + item.id + "' title='Edit'><span class=\"green\"><i class=\"ace-icon fa fa-pencil-square-o bigger-120\"></i></span></a>")
+                                }
+                else
+                {
+                    @Html.Raw("<a class=\"tooltip-success\" data-rel=\"tooltip\" title=\"Edit\" data-modal='' href='/admin/Pages/PagesEdit/" + item.id + "' id='" + item.id + "' title='Edit'><span class=\"green\"><i class=\"ace-icon fa fa-pencil-square-o bigger-120\"></i></span></a>")
+                                }
+
+                @if (item.id != 1)
+               {
+                <span onclick="return confirm('Are you sure you want to delete this content page?')">
+                    @if (Request.QueryString["page"] != null)
+                    {
+                        @Html.Raw("<a class=\"tooltip-error\" data-rel=\"tooltip\" title=\"Delete\" data-modal='' href='/admin/Pages/PagesDelete/" + item.id + "?page = " + Request.QueryString["page"].ToString() + "' id='" + item.id + "' title='Delete'><span class=\"red\"><i class=\"ace-icon fa fa-trash-o bigger-120\"></i></span></a>")
+                    }
+                    else
+                    {
+                        @Html.Raw("<a class=\"tooltip-error\" data-rel=\"tooltip\" title=\"Delete\" data-modal='' href='/admin/Pages/PagesDelete/" + item.id + "' id='" + item.id + "' title='Delete'><span class=\"red\"><i class=\"ace-icon fa fa-trash-o bigger-120\"></i></span></a>")
+                    }
+                   
+                </span>
+               }
+                </text>)
+            ));
+                                }
+                                @* </div>*@
+                            </div>
+                            <!-- end widget content -->
+
+                        </div>
+                        <!-- end widget div -->
+
+                    </div>
+                    <!-- end widget -->
+
+                </article>
+                <!-- WIDGET END -->
+                                    }
+        </div>
+
+        <!-- end row -->
+        <!-- end row -->
+
+    </section>
+    <!-- end widget grid -->
+
+</div>
+ @*<script src="~/Content/BoostrapThemes/js/jquery-2.1.1.js"></script>
+<script src="~/Content/BoostrapThemes/js/plugins/dataTables/jquery.dataTables.js"></script>
+<script src="~/Content/BoostrapThemes/js/plugins/dataTables/dataTables.bootstrap.js"></script>
+<script src="~/Content/BoostrapThemes/js/plugins/dataTables/dataTables.responsive.js"></script>
+<script src="~/Content/BoostrapThemes/js/plugins/dataTables/dataTables.tableTools.min.js"></script>*@
+
+<!-- Page-Level Scripts -->
+@Scripts.Render("~/bundles/jquery")
+<script type="text/jscript">
+    $(document).ready(function () {
+        //   var oTable = $('#editable').DataTable();
+
+    });
+
+    function fnClickAddRow() {
+        $('#editable').dataTable().fnAddData([
+            "Custom row",
+            "New row",
+            "New row",
+            "New row",
+            "New row"]);
+
+    }
+</script>
+
+
+

@@ -1,0 +1,238 @@
+﻿@*@model SmartAdminMvc.Models.CompanyReportModel*@
+@model List<SmartAdminMvc.Models.CompanyReportModel>
+<!--
+       The ID "widget-grid" will start to initialize all widgets below
+       You do not need to use widgets if you dont want to. Simply remove
+       the <section></section> and you can use wells or panels instead
+       -->
+<div>
+    <div class="jarviswidget-editbox">
+    </div>
+    @using (Ajax.BeginForm("CompanyBudgetReport", "CompanyReport", new AjaxOptions
+    {
+        InsertionMode = InsertionMode.Replace,
+        HttpMethod = "POST",
+        UpdateTargetId = "TargetId",
+        OnSuccess = "updateSuccess"
+    }))
+    {
+        <div class="widget-body no-padding">
+
+            <table id="datatable_tabletools" class="table table-striped table-bordered table-hover" width="100%">
+                <thead>
+                    <tr>
+                        <th data-class="expand">Category</th>
+                        <th data-class="expand">weekly Budget</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.Count() > 0)
+                    {
+                        foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@Html.DisplayFor(modelItem => item.CategoryName)</td>
+                                @*<td>@Html.DisplayFor(model => model.CategoryName)</td>*@
+                                <td>
+                                    <table id="datatable_tabletools" class="table table-striped table-bordered table-hover" width="100%">
+                                        <tr>
+                                            <td>
+                                                Week 1
+                                            </td>
+                                            <td>
+                                                week 2
+                                            </td>
+                                            <td>
+                                                week 3
+                                            </td>
+                                            <td>
+                                                week 4
+                                            </td>
+                                            <td>
+                                                week 5
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            @for (int i = 0; i < item.weekAmountlist.Count(); i++)
+                                                {
+
+                                                    <td>
+
+
+                                                        <label class="radio">
+
+                                                            <i></i> @item.weekAmountlist[i].weeklyBudgetAmount
+
+                                                        </label>
+                                                    </td>
+                                                }
+                                            @*@for (int i = 0; i < 5; i++)
+                                            {
+                                                <td>
+                                                   
+                                                    <!-- widget content -->
+                                                    <div class="widget-body">
+
+                                                        <!-- this is what the user will see -->
+                                                        <canvas id="pieChart@(i)" height="60"></canvas>
+
+                                                    </div>
+                                                    <!-- end widget content -->
+
+                                                </td>   }*@
+                                        </tr>
+
+                                    </table>
+
+                                </td>
+
+
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="5">
+                                <p class="alert alert-warning">
+                                    <i class="fa fa-warning fa-fw fa-lg"></i><strong>!</strong>
+                                    No data found
+                                </p>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+        </div>
+    }
+    </div>
+    <!-- END MAIN CONTENT -->
+    @section pagespecific {
+        <script type="text/javascript">
+
+            $(document).ready(function () {
+
+                /* DO NOT REMOVE : GLOBAL FUNCTIONS!
+                 *
+                 * pageSetUp(); WILL CALL THE FOLLOWING FUNCTIONS
+                 *
+                 * // activate tooltips
+                 * $("[rel=tooltip]").tooltip();
+                 *
+                 * // activate popovers
+                 * $("[rel=popover]").popover();
+                 *
+                 * // activate popovers with hover states
+                 * $("[rel=popover-hover]").popover({ trigger: "hover" });
+                 *
+                 * // activate inline charts
+                 * runAllCharts();
+                 *
+                 * // setup widgets
+                 * setup_widgets_desktop();
+                 *
+                 * // run form elements
+                 * runAllForms();
+                 *
+                 ********************************
+                 *
+                 * pageSetUp() is needed whenever you load a page.
+                 * It initializes and checks for all basic elements of the page
+                 * and makes rendering easier.
+                 *
+                 */
+
+                pageSetUp();
+
+                /*
+                 * ALL PAGE RELATED SCRIPTS CAN GO BELOW HERE
+                 * eg alert("my home function");
+                 *
+                 * var pagefunction = function() {
+                 *   ...
+                 * }
+                 * loadScript("js/plugin/_PLUGIN_NAME_.js", pagefunction);
+                 *
+                 * TO LOAD A SCRIPT:
+                 * var pagefunction = function (){
+                 *  loadScript(".../plugin.js", run_after_loaded);
+                 * }
+                 *
+                 * OR
+                 *
+                 * loadScript(".../plugin.js", run_after_loaded);
+                 */
+
+                // reference: http://www.chartjs.org/docs/
+                // ref: http://www.chartjs.org/docs/#line-chart-introduction
+
+                // PIE CHART
+
+                var pieOptions = {
+                    //Boolean - Whether we should show a stroke on each segment
+                    segmentShowStroke: true,
+                    //String - The colour of each segment stroke
+                    segmentStrokeColor: "#fff",
+                    //Number - The width of each segment stroke
+                    segmentStrokeWidth: 2,
+                    //Number - Amount of animation steps
+                    animationSteps: 100,
+                    //String - types of animation
+                    animationEasing: "easeOutBounce",
+                    //Boolean - Whether we animate the rotation of the Doughnut
+                    animateRotate: true,
+                    //Boolean - Whether we animate scaling the Doughnut from the centre
+                    animateScale: false,
+                    //Boolean - Re-draw chart on page resize
+                    responsive: true,
+                    //String - A legend template
+                    legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>"
+                };
+
+                var pieData = [
+                       {
+                           value: 300,
+                           color: "rgba(220,220,220,0.9)",
+                           highlight: "rgba(220,220,220,0.8)",
+                           label: "My Buget"
+                       },
+                       {
+                           value: 100,
+                           color: "rgba(169, 3, 41, 0.7)",
+                           highlight: "rgba(169, 3, 41, 0.7)",
+                           label: "Buget Amount"
+                       }
+                ];
+                var marker = [];
+                for (count = 0; count < 5; count++) {
+                    marker[count] = [
+                       {
+                           value: count,
+                           color: "rgba(220,220,220,0.9)",
+                           highlight: "rgba(220,220,220,0.8)",
+                           label: "My Buget"
+                       },
+                       {
+                           value: count,
+                           color: "rgba(169, 3, 41, 0.7)",
+                           highlight: "rgba(169, 3, 41, 0.7)",
+                           label: "Buget Amount"
+                       }
+                    ];
+
+                    // render chart
+                    var ctx = document.getElementById("pieChart" + count).getContext("2d");
+                    var myNewChart = new Chart(ctx).Pie(marker[count], pieOptions);
+                }
+
+
+                // END PIE CHART
+
+            })
+
+        </script>
+    }
+
+
+

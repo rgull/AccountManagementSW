@@ -1,0 +1,62 @@
+﻿@model SmartAdminMvc.Areas.Admin.Models.Category
+
+@{
+    ViewBag.Title = "AddCategory";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div id="content" class="container width">
+    <div class="row center">
+
+        <div class="col-xs-12 col-sm-12 col-md-8 in_blk">
+            <div class="well no-padding">
+                <form method="post" action="#" name="logFrm" class="smart-form clientform client-form" role="form">
+                    @using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl }))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(true)
+                        <header class="left_align">
+                            Edit Category
+                        </header>
+                        <fieldset>
+                            <section class="formrow2">
+                                <label class="label">Budget Type</label>
+                                <label class="input">
+                                    @*<i class="icon-append fa fa-user"></i>*@
+                                    @Html.DropDownListFor(model => model.budgetTypeId, Model.BudgetTypeList, "--- Select Budget Type ---", new { @class = "form-control", @required = "required", placeholder = "Budget Type" })
+                                    <b class="tooltip tooltip-top-right"><i class="fa fa-user txt-color-teal"></i> Please enter Budget Type</b>
+                                </label>
+                            </section>
+                            <section class="formrow2">
+                                <label class="label">Category Name</label>
+                                <label class="input">
+                                    <i class="icon-append fa fa-user"></i>
+                                    @Html.TextBoxFor(m => m.name, new { @class = "form-control", @required = "required", maxlength = 100, placeholder = "Category" })
+                                    <b class="tooltip tooltip-top-right"><i class="fa fa-user txt-color-teal"></i> Please enter Category Name</b>
+                                </label>
+                            </section>
+                            <section class="formrow2">
+                                <label class="label">Status</label>
+                                <div class="checkboxgroup">
+                                    <label class="checkbox left_align">
+                                        @*<input type="checkbox" name="rememberMe" value="true" checked="checked">*@
+                                        @Html.CheckBoxFor(m => m.isActive)
+                                        <i></i>is Active
+                                    </label></div>
+</section>
+                        </fieldset>
+                        <footer>
+                            @*<button class="btn btn-white" type="button" onclick="@("location.href='" + Url.Action("CategoryView", "Category") + "'")">Cancel</button>*@
+                            <button class="btn btn-white" type="button" onclick="@("location.href='/admin/Category/CategoryView?page=" + HttpContext.Current.Request.QueryString["page"] + "'")">Cancel</button>
+                            <button type="submit" class="btn btn-primary">
+                                Save
+                            </button>
+                        </footer>
+                    }
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+

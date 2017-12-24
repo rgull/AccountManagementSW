@@ -1,0 +1,186 @@
+﻿@model SmartAdminMvc.Models.UserPagesModels
+@{
+    ViewBag.Title = "login";
+    //  Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+     Layout = null;
+    ViewBag.PageId = "extr-page";
+    ViewBag.PageClass = "animated fadeInDown";
+}
+<!DOCTYPE html>
+<html lang="en-us" id="@ViewBag.PageId" class="@Settings.CurrentTheme fixhight">
+<head>
+    <meta charset=" utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title> Management Software </title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Basic Styles -->
+    @Styles.Render("~/content/smartadmin")
+    <!-- FAVICONS -->
+    <link rel="shortcut icon" href="~/content/img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="~/content/img/favicon/favicon.ico" type="image/x-icon">
+
+    <!-- GOOGLE FONT -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
+
+    <!-- Specifying a Webpage Icon for Web Clip
+         Ref: https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html -->
+    <link rel="apple-touch-icon" href="~/content/img/splash/sptouch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="~/content/img/splash/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="~/content/img/splash/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="~/content/img/splash/touch-icon-ipad-retina.png">
+
+    <!-- iOS web-app metas : hides Safari UI Components and Changes Status Bar Appearance -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Startup image for web apps -->
+    <link rel="apple-touch-startup-image" href="~/content/img/splash/ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
+    <link rel="apple-touch-startup-image" href="~/content/img/splash/ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
+    <link rel="apple-touch-startup-image" href="~/content/img/splash/iphone.png" media="screen and (max-device-width: 320px)">
+
+    <!--for Slider start-->
+    <link rel="stylesheet" href="~/Scripts/Sliderplugins/style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="~/Scripts/Sliderplugins/jquery.bxslider.css" type="text/css" media="screen">
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="~/Scripts/Sliderplugins/jquery.bxslider.js"></script>
+    <script>
+$( document ).ready(function() {
+
+$('.bxslider').bxSlider({
+  mode:'fade',
+  captions: true,
+  auto: true,
+
+});
+});
+    </script>
+    <!--for Slider end-->
+</head>
+<body class="@ViewBag.PageClass @Settings.CurrentTheme fixghithsss">
+    <div class="wapper">
+        <header id="header">
+            <div id="logo-group">
+
+                <!-- PLACE YOUR LOGO HERE -->
+                <span id="logo"> <img src="~/content/img/logo.png" alt="SmartAdmin"> </span>
+                <!-- END LOGO PLACEHOLDER -->
+
+            </div>
+
+            <section id="top-right" class="top_right">
+                @*<div id="login" class="btn-header transparent pull-right">
+                        <span> <a href="@Url.Action("Companylogin", "Companylogin")"  title="Company Login"><span class="menu-item-parent">Login</span></a>  </span>
+                    </div>
+
+                    <div id="Aboutus" class="btn-header transparent pull-right">
+                                <span> <a href="@Url.Action("Index", "UserPages",new { id=2 })" title="About us"><span class="menu-item-parent">About us</span></a>  </span>
+                    </div>
+                    <div id="Home" class="btn-header transparent pull-right">
+                        <span> <a href="@Url.Action("Index", "UserPages",new { id = 1 })" title="Home"><span class="menu-item-parent">Home</span></a>  </span>
+                    </div>*@
+                <ul>
+                    @for (int j = 0; j < Model.ListOfPages.Count(); j++)
+            {
+                        <li><a href="@Url.Action("Index", "UserPages", new { id = Model.ListOfPages[j].id })"> @Model.ListOfPages[j].name</a></li>
+                    }  @*<li><a href="@Url.Action("Index", "UserPages",new { id=2 })">About Us</a></li>*@
+                    <li><a href="@Url.Action("Companylogin", "Companylogin")">Login</a></li>
+
+                </ul>
+            </section>
+        </header>
+        @*<aside id="left-panel">
+                <nav>
+                    <ul>
+                        <li class="@Html.RouteIf("index", "active")">
+                            <a href="@Url.Action("Index", "UserPages")" title="Home"><span class="menu-item-parent">Home</span></a>
+                        </li>
+                        <li class="@Html.RouteIf("index", "active")">
+                            <a href="@Url.Action("Index", "UserPages")" title="Home"><span class="menu-item-parent">About Us</span></a>
+                        </li>
+                        <li class="@Html.RouteIf("index", "active")">
+                            <a href="@Url.Action("Index", "UserPages")" title="Home"><span class="menu-item-parent">Login</span></a>
+                        </li>
+                     </ul>
+                    </nav>
+            </aside>*@
+        <div id="main" role="main" class="indexheight">
+            @if (Model.id == 1)
+            {
+                <div class="slider" id="slider">
+                    <ul class="bxslider">
+                        <li><img src="~/Content/img/Slider-images/banner-1.jpg" title="Ask a Question.." /></li>
+                        <li><img src="~/Content/img/Slider-images/banner-2.jpg" title="Find a Way.." /></li>
+                        <li><img src="~/Content/img/Slider-images/banner-3.jpg" title="Achieve Your Goals.." /></li>
+                    </ul>
+                </div>
+            }
+            <div id="content" class="container">
+
+                <div class="row">
+                    @Html.Raw(WebUtility.HtmlDecode(Model.description))
+                    @* <div class="col-xs-12 col-sm-12 col-md-7 col-lg-8 hidden-xs hidden-sm">
+
+                        <h1 class="txt-color-red login-header-big">SmartAdmin</h1>
+                         <div class="hero">
+
+                             <div class="pull-left login-desc-box-l">
+                                 <h4 class="paragraph-header">It's Okay to be Smart. Experience the simplicity of SmartAdmin, everywhere you go!</h4>
+                                 <div class="login-app-icons">
+
+                                 </div>
+                             </div>
+
+                         </div>
+
+                         <div class="row">
+                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                 <h5 class="about-heading">About SmartAdmin - Are you up to date?</h5>
+                                 <p>
+                                     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.
+                                 </p>
+                             </div>
+                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                 <h5 class="about-heading">Not just your average template!</h5>
+                                 <p>
+                                     Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi voluptatem accusantium!
+                                 </p>
+                             </div>
+                         </div>
+
+                                    </div>
+                                   <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4">
+                                        <div class="well no-padding">
+                                         @Html.Raw(WebUtility.HtmlDecode(Model.description))
+                                        </div>
+
+                                    </div>*@
+                </div>
+            </div>
+        </div><div class="push"></div>
+    </div>
+  
+    <div class="page-footer positions leftpadding">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 leftcon">
+                <span class="txt-color-white">Management Software <span class="hidden-xs"> - Web Application Framework</span> © 2011-2016</span>
+            </div>
+            <div class="col-xs-12 col-sm-6 text-right rightfootbar">
+                <div class="txt-color-white inline-block">
+
+                    <a href="http://web-design-fort-lauderdale.org/" style="color:#1d446d" target="_blank"> Web Design Fort Lauderdale</a>
+                    <br>
+                    <a href="http://south-florida-website-designers.com" style="color:#1d446d" target="_blank">Web Design South Florida</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+  
+</body>
+</html>
+
