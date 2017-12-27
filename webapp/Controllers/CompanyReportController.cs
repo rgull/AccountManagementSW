@@ -408,6 +408,39 @@ namespace SmartAdminMvc.Controllers
             }
             return report_List;
         }
+        public Decimal getMonthlyData(DateTime reportdate)
+        {
+            DateTime repoerdate = reportdate;
+            decimal TotalMonthlyBudget = 0;
+            var report_List = new List<YearlyBudgetOld1>();
+            CompanyReportBL objreport = new CompanyReportBL();
+            if (Session["CompanyUser"] != null)
+            {
+                int companyId = Convert.ToInt32(Session["CompanyId"].ToString());
+                
+
+                using (managementsoftwaredbEntities context = new managementsoftwaredbEntities())
+                {
+                    
+                    List<object> parameters = new List<object>();
+                    //parameters.Add(new SqlParameter("categoryid", catId));
+                    parameters.Add(new SqlParameter("companyId", companyId));
+                    parameters.Add(new SqlParameter("date", repoerdate));
+                    
+                    var obj = context.Database.SqlQuery<decimal>("sp_MonthlyReport @companyId , @date", parameters.ToArray()).ToList();
+                    // return list;
+
+                    if (obj.Any())
+                    {                       
+                        TotalMonthlyBudget = obj[0];
+                        return TotalMonthlyBudget;
+                    }
+
+                }
+
+            }
+            return TotalMonthlyBudget;
+        }
         public int GetyearlyCarCount(DateTime reportDate)
         {
             int carCount = 0;
@@ -450,13 +483,11 @@ namespace SmartAdminMvc.Controllers
                 //RGK Add Total Income Data
                 if (dateforreport != "")
                 {
-                    var yearlyBudget = getYearlyData(DateTime.ParseExact(dateforreport.ToString(), "MM/dd/yyyy", null));
+                    var monthlyBudget = getMonthlyData(DateTime.ParseExact(dateforreport.ToString(), "MM/dd/yyyy", null));
                     model.CarCount = GetyearlyCarCount(DateTime.ParseExact(dateforreport.ToString(), "MM/dd/yyyy", null));
-                    if (yearlyBudget != null)
+                    if (monthlyBudget > 0)
                     {
-                        model.Income = yearlyBudget.Where(yb => yb.categoryId == 3).Sum(x => x.RealBudgetTotal);
-                        if (model.Income != 0)
-                            model.AverageTicketValue = model.Income / model.CarCount;
+                        model.Income = monthlyBudget;                        
                     }
                 }
                 
