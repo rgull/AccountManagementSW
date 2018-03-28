@@ -425,9 +425,10 @@ namespace SmartAdminMvc.BL
                             var mycatTypeList = new MyParameterList();
                             mycatTypeList.name = obj[i].name;
                             mycatTypeList.id = obj[i].id;
-                           
+                            
                             if (checkOnceInmonth(obj[i].id, CompanyId,date) > 0)
                             {
+                                mycatTypeList.isAddOnceInMonth = true;
                                 decimal lastWeekValue = HaveentryInOnceInmonth(obj[i].id, CompanyId, date);
                                 if (lastWeekValue == 0)
                                 {
@@ -569,7 +570,7 @@ namespace SmartAdminMvc.BL
                         {
                             mycatTypeList.budget = lastBudget.budget;
                             mycatTypeList.reportType = lastBudget.reportType;
-                            mycatTypeList.isAddOnceInMonth = lastBudget.isAddOnceInMonth.HasValue ? lastBudget.isAddOnceInMonth.HasValue : false;
+                            mycatTypeList.isAddOnceInMonth = lastBudget.isAddOnceInMonth.HasValue ? (bool)lastBudget.isAddOnceInMonth : false;
                             mycatTypeList.SelectedreportTypeId = lastBudget.reportType;
                         }
                         else
@@ -654,7 +655,10 @@ namespace SmartAdminMvc.BL
                               && db.categoryId == CategoryId
                               && (db.date <= date && db.reportType < 3)
                               && db.isAddOnceInMonth == true
-                              select db).OrderByDescending(x => x.date).FirstOrDefault();
+                              && db.date.Year == date.Year
+                              && db.date.Month == date.Month
+                                select db).OrderByDescending(x => x.date).FirstOrDefault();
+                    
 
                     if(ut==null)
                          ut = (from db in context.tblExpectedBudgetLines

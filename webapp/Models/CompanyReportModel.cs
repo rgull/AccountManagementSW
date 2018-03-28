@@ -41,6 +41,16 @@ namespace SmartAdminMvc.Models
         public DateTime BudgetDate { get; set; }
     }
 
+    public class MonthlyBudget
+    {
+        public int categoryId { get; set; }
+        public int budgettypeId { get; set; }
+        public string CategoryName { get; set; }
+        public decimal BudgetAmountTotal { get; set; }
+        public decimal RealBudgetTotal { get; set; }
+        public DateTime BudgetDate { get; set; }
+    }
+
     public class YearlyReportModel
     {
         public List<YearlyItem> YearlyItems;

@@ -86,7 +86,9 @@ namespace SmartAdminMvc.BL
                     parameters.Add(new SqlParameter("companyId", companyId));
                     parameters.Add(new SqlParameter("date", BudgetDate));
                     //var obj = context.Database.SqlQuery<weeklyListofbudget>("sp_ReportByweeks @categoryid , @companyId , @date", parameters.ToArray()).ToList();
+                    //RGK 4-3-18 Palced Line number396 here and replaced with old call for SP
                     var obj = context.Database.SqlQuery<weeklyListofbudget>("sp_ReportByweeksWithfilter @categoryid , @companyId , @date", parameters.ToArray()).ToList();
+                    //var obj = context.Database.SqlQuery<weeklyListofbudget>("sp_ParametersReportByweeksWithfilter @categoryid , @companyId , @date", parameters.ToArray()).ToList();
                     // return list;
                     if (obj.Any())
                     {

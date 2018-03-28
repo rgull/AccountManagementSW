@@ -262,7 +262,7 @@
                                                                     @if (1 <= item.CategoryParameterslist[p].weeklyParaList[s].totalweekdays)
                                                                     {
                                                                         <td>
-                                                                            <span class="span_con">
+                                                                            <span class="span_con">                                                                                
                                                                                 @System.Configuration.ConfigurationManager.AppSettings["CurrencySymbol"].ToString()@String.Format("{0:N2}", item.CategoryParameterslist[p].weeklyParaList[s].bugetLineweek1)
                                                                             </span>
                                                                             <span class="span_con">
@@ -376,7 +376,7 @@
                                                                     @if (2 <= item.CategoryParameterslist[p].weeklyParaList[s].totalweekdays)
                                                                     {
                                                                         <td>
-                                                                            <span class="span_con">
+                                                                            <span class="span_con">                                                                                
                                                                                 @System.Configuration.ConfigurationManager.AppSettings["CurrencySymbol"].ToString()@String.Format("{0:N2}", item.CategoryParameterslist[p].weeklyParaList[s].bugetLineweek2)
                                                                             </span>
                                                                             <span class="span_con">
@@ -2686,7 +2686,9 @@
                 avareticit=TotalofIncome/cars
                 // alert()
                 $("#lbltotalincom").text('$' + TotalofIncome.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
-                $("#lbltotalincomwithoutdiscount").text('$' + TotalIncomeWithoutDiscount.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+                //$("#lbltotalincomwithoutdiscount").text('$' + TotalIncomeWithoutDiscount.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+                //RGK 03-27-2018
+                $("#lbltotalincomwithoutdiscount").text('$' + TotalofIncome.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
                 $("#lblavragetckit").text('$' + avareticit.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
                 
             }
@@ -2694,7 +2696,9 @@
             {
                 avareticit=0;
                 $("#lbltotalincom").text('$' + TotalofIncome.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
-                $("#lbltotalincomwithoutdiscount").text('$' + TotalIncomeWithoutDiscount.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+                //$("#lbltotalincomwithoutdiscount").text('$' + TotalIncomeWithoutDiscount.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+                //RGK 03-27-2018
+                $("#lbltotalincomwithoutdiscount").text('$' + TotalofIncome.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
                 $("#lblavragetckit").text('$' + avareticit.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
             }
 
@@ -3434,7 +3438,7 @@
                 {
                     //  alert(BudgetTypeId);
                     TotalofIncome = parseFloat(TotalofIncome) + parseFloat(mybugetweek);
-                    
+                    console.log("TotalIncomeWithoutDiscount: " + TotalIncomeWithoutDiscount);
                         TotalIncomeWithoutDiscount = parseFloat(TotalIncomeWithoutDiscount) + parseFloat(mybugetweek);
                     
                 }
@@ -3479,7 +3483,11 @@
 
             }
             TotalDicount = @TotalDiscount;
-            TotalIncomeWithoutDiscount = TotalofIncome + TotalDicount;
+            console.log('TotalofIncome: ' + TotalofIncome);
+            console.log('TotalDicount: ' + TotalDicount);
+            console.log('TotalIncomeWithoutDiscount: ' + TotalIncomeWithoutDiscount);
+            //TotalIncomeWithoutDiscount = TotalofIncome + TotalDicount;
+            TotalIncomeWithoutDiscount = TotalofIncome - TotalDicount;
         });
 
     </script>

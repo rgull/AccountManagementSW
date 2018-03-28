@@ -203,26 +203,27 @@ namespace SmartAdminMvc.Controllers
                                             {
                                                 weeklyParaListofbudget weeklyDiscount = DiscountCat.weeklyParaList[i];
                                                 weeklyParaListofbudget weeklyincome = IncomeCat.weeklyParaList[i];
-                                                weeklyincome.mybugetweek1 = weeklyincome.mybugetweek1 - Math.Abs(weeklyDiscount.mybugetweek1);
+                                                //RGK - 03-27-2018 - We Do not need to subtract Discount at this point. As we just need to display actual Amount Entered
+                                                weeklyincome.mybugetweek1 = weeklyincome.mybugetweek1; //weeklyincome.mybugetweek1 - Math.Abs(weeklyDiscount.mybugetweek1);
                                                 if (weeklyincome.bugetLineweek1 != 0)
                                                     weeklyincome.percentage1 = (weeklyincome.mybugetweek1 - weeklyincome.bugetLineweek1) / weeklyincome.bugetLineweek1 * 100;
-                                                weeklyincome.mybugetweek2 = weeklyincome.mybugetweek2 - Math.Abs(weeklyDiscount.mybugetweek2);
+                                                weeklyincome.mybugetweek2 = weeklyincome.mybugetweek2; //weeklyincome.mybugetweek2 - Math.Abs(weeklyDiscount.mybugetweek2);
                                                 if (weeklyincome.bugetLineweek2 != 0)
                                                     weeklyincome.percentage2 = (weeklyincome.mybugetweek2 - weeklyincome.bugetLineweek2) / weeklyincome.bugetLineweek2 * 100;
-                                                weeklyincome.mybugetweek3 = weeklyincome.mybugetweek3 - Math.Abs(weeklyDiscount.mybugetweek3);
+                                                weeklyincome.mybugetweek3 = weeklyincome.mybugetweek3; //weeklyincome.mybugetweek3 - Math.Abs(weeklyDiscount.mybugetweek3);
                                                 if (weeklyincome.bugetLineweek3 != 0)
                                                     weeklyincome.percentage3 = (weeklyincome.mybugetweek3 - weeklyincome.bugetLineweek3) / weeklyincome.bugetLineweek3 * 100;
-                                                weeklyincome.mybugetweek4 = weeklyincome.mybugetweek4 - Math.Abs(weeklyDiscount.mybugetweek4);
+                                                weeklyincome.mybugetweek4 = weeklyincome.mybugetweek4; //weeklyincome.mybugetweek4 - Math.Abs(weeklyDiscount.mybugetweek4);
                                                 if (weeklyincome.bugetLineweek4 != 0)
                                                     weeklyincome.percentage4 = (weeklyincome.mybugetweek4 - weeklyincome.bugetLineweek4) / weeklyincome.bugetLineweek4 * 100;
-                                                weeklyincome.mybugetweek5 = weeklyincome.mybugetweek5 - Math.Abs(weeklyDiscount.mybugetweek5);
+                                                weeklyincome.mybugetweek5 = weeklyincome.mybugetweek5; //weeklyincome.mybugetweek5 - Math.Abs(weeklyDiscount.mybugetweek5);
                                                 if (weeklyincome.bugetLineweek5 != 0)
                                                     weeklyincome.percentage5 = (weeklyincome.mybugetweek5 - weeklyincome.bugetLineweek5) / weeklyincome.bugetLineweek5 * 100;
-                                                weeklyincome.mybugetweek6 = weeklyincome.mybugetweek6 - Math.Abs(weeklyDiscount.mybugetweek6);
+                                                weeklyincome.mybugetweek6 = weeklyincome.mybugetweek6; //weeklyincome.mybugetweek6 - Math.Abs(weeklyDiscount.mybugetweek6);
                                                 if (weeklyincome.bugetLineweek6 != 0)
                                                     weeklyincome.percentage6 = (weeklyincome.mybugetweek6 - weeklyincome.bugetLineweek6) / weeklyincome.bugetLineweek6 * 100;
 
-                                                weeklyincome.TotalmybugetMonth = weeklyincome.TotalmybugetMonth - Math.Abs(weeklyDiscount.TotalmybugetMonth);
+                                                weeklyincome.TotalmybugetMonth = weeklyincome.TotalmybugetMonth; //weeklyincome.TotalmybugetMonth - Math.Abs(weeklyDiscount.TotalmybugetMonth);
                                                 if (weeklyincome.TotalbugetLineMonth != 0)
                                                     weeklyincome.TotalpercentageMonth = (weeklyincome.TotalmybugetMonth - weeklyincome.TotalbugetLineMonth) / weeklyincome.TotalbugetLineMonth * 100;
                                                 if (weeklyIncomelist != null)
@@ -408,6 +409,63 @@ namespace SmartAdminMvc.Controllers
             }
             return report_List;
         }
+        public List<MonthlyBudget> getMonthlyData(DateTime reportdate)
+        {
+            DateTime repoerdate = reportdate;
+            var report_List = new List<MonthlyBudget>();
+            CompanyReportBL objreport = new CompanyReportBL();
+            if (Session["CompanyUser"] != null)
+            {
+                int companyId = Convert.ToInt32(Session["CompanyId"].ToString());
+                MonthlyBudget updatemodel = new MonthlyBudget();
+
+                using (managementsoftwaredbEntities context = new managementsoftwaredbEntities())
+                {
+                    //var obj = (from db in context.tblRealBudgets
+                    //           join ct in context.tblCategories on db.categoryId equals ct.id
+                    //           join mc in context.tblCategories on ct.parentId equals mc.id
+                    //           join ex in context.tblExpectedBudgetLines on db.categoryId equals ex.categoryId
+                    //           where db.companyId == companyId
+                    //           where db.date.Year == repoerdate.Year
+                    //           select new reportList
+                    //           {
+                    //               categoryId = mc.id,
+                    //               CategoryName = mc.name,
+                    //               // RealBudgetTotal = db.budget,
+                    //               // BudgetAmountTotal = ex.budget,
+                    //               // BudgetDate = db.date
+                    //           }).Distinct().ToList();
+                    List<object> parameters = new List<object>();
+                    //parameters.Add(new SqlParameter("categoryid", catId));
+                    parameters.Add(new SqlParameter("companyId", companyId));
+                    parameters.Add(new SqlParameter("date", repoerdate));
+                    var obj = context.Database.SqlQuery<MonthlyBudget>("sp_MonthlyKeyPointIndicatorReport @companyId , @date", parameters.ToArray()).ToList();
+                    // return list;
+
+                    if (obj.Any())
+                    {
+                        double TOTALRealBudget = 0;
+                        double TOTALBudgetAmount = 0;
+                        for (int i = 0; i < obj.Count; i++)
+                        {
+                            var Company_Report_item = new MonthlyBudget();
+                            Company_Report_item.categoryId = obj[i].categoryId;
+                            Company_Report_item.budgettypeId = obj[i].budgettypeId;
+                            Company_Report_item.CategoryName = obj[i].CategoryName;
+                            Company_Report_item.BudgetAmountTotal = obj[i].BudgetAmountTotal;
+                            Company_Report_item.RealBudgetTotal = obj[i].RealBudgetTotal;
+                            // Company_Report_item.BudgetDate = obj[i].BudgetDate;
+                            report_List.Add(Company_Report_item);
+                        }
+
+                        return report_List;
+                    }
+
+                }
+
+            }
+            return report_List;
+        }
         public int GetyearlyCarCount(DateTime reportDate)
         {
             int carCount = 0;
@@ -419,6 +477,21 @@ namespace SmartAdminMvc.Controllers
                 using (managementsoftwaredbEntities context = new managementsoftwaredbEntities())
                 {
                     carCount=  objreport.MyBudgetYearlyCarCount(Convert.ToInt32(Session["CompanyId"].ToString()), reportDate);
+                }
+            }
+            return carCount;
+        }
+        public int GetMonthlyCarCount(DateTime reportDate)
+        {
+            int carCount = 0;
+            if (Session["CompanyUser"] != null)
+            {
+                int companyId = Convert.ToInt32(Session["CompanyId"].ToString());
+
+                CompanyReportBL objreport = new CompanyReportBL();
+                using (managementsoftwaredbEntities context = new managementsoftwaredbEntities())
+                {
+                    carCount = objreport.MyBudgetCarCount(Convert.ToInt32(Session["CompanyId"].ToString()), reportDate);
                 }
             }
             return carCount;
@@ -450,11 +523,11 @@ namespace SmartAdminMvc.Controllers
                 //RGK Add Total Income Data
                 if (dateforreport != "")
                 {
-                    var yearlyBudget = getYearlyData(DateTime.ParseExact(dateforreport.ToString(), "MM/dd/yyyy", null));
-                    model.CarCount = GetyearlyCarCount(DateTime.ParseExact(dateforreport.ToString(), "MM/dd/yyyy", null));
-                    if (yearlyBudget != null)
+                    var monthlyBudget = getMonthlyData(DateTime.ParseExact(dateforreport.ToString(), "MM/dd/yyyy", null));
+                    model.CarCount = GetMonthlyCarCount(DateTime.ParseExact(dateforreport.ToString(), "MM/dd/yyyy", null));
+                    if (monthlyBudget != null)
                     {
-                        model.Income = yearlyBudget.Where(yb => yb.categoryId == 3).Sum(x => x.RealBudgetTotal);
+                        model.Income = monthlyBudget.Where(yb => yb.categoryId == 3).Sum(x => x.RealBudgetTotal);
                         if (model.Income != 0)
                             model.AverageTicketValue = model.Income / model.CarCount;
                     }
