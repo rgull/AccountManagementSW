@@ -187,6 +187,6 @@ I:\Rick\Rick\AccountManagementSW\webapp\bin\System.Web.Razor.xml
 I:\Rick\Rick\AccountManagementSW\webapp\bin\System.Web.WebPages.xml
 I:\Rick\Rick\AccountManagementSW\webapp\bin\System.Web.WebPages.Deployment.xml
 I:\Rick\Rick\AccountManagementSW\webapp\bin\System.Web.WebPages.Razor.xml
-I:\Rick\Rick\AccountManagementSW\webapp\obj\Debug\AccountManagementMVC.csprojResolveAssemblyReference.cache
 I:\Rick\Rick\AccountManagementSW\webapp\obj\Debug\SmartAdminMvc.dll
 I:\Rick\Rick\AccountManagementSW\webapp\obj\Debug\SmartAdminMvc.pdb
+I:\Rick\Rick\AccountManagementSW\webapp\obj\Debug\AccountManagementMVC.csprojResolveAssemblyReference.cache

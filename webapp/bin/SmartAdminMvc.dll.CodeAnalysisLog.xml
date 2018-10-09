@@ -12,21 +12,21 @@
          <Members>
           <Member Name="#CheckUserLogin(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\Areas\Admin\BL" File="AdminBL.cs" Line="35">'AdminBL.CheckUserLogin(string, string)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ShowAllAdmin(System.String,System.Int32,System.Int32,System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\Areas\Admin\BL" File="AdminBL.cs" Line="146">'AdminBL.ShowAllAdmin(string, int, int, string, string)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#UserDelete(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\Areas\Admin\BL" File="AdminBL.cs" Line="118">'AdminBL.UserDelete(int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
@@ -37,63 +37,63 @@
          <Members>
           <Member Name="#AdminViewAllBudgetLineList(System.String,System.Int32,System.Int32,System.String,System.String,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\Areas\Admin\BL" File="BudgetAmountBL.cs" Line="399">'BudgetAmountBL.AdminViewAllBudgetLineList(string, int, int, string, string, int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#BudgetLineDelete(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\Areas\Admin\BL" File="BudgetAmountBL.cs" Line="309">'BudgetAmountBL.BudgetLineDelete(int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#BudgetLineDeleteWithrealBudget(System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\Areas\Admin\BL" File="BudgetAmountBL.cs" Line="333">'BudgetAmountBL.BudgetLineDeleteWithrealBudget(int, int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#BudgetTypefetch()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\Areas\Admin\BL" File="BudgetAmountBL.cs" Line="86">'BudgetAmountBL.BudgetTypefetch()' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Categoryfetch(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\Areas\Admin\BL" File="BudgetAmountBL.cs" Line="47">'BudgetAmountBL.Categoryfetch(int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#CategoryValueFetch(System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\Areas\Admin\BL" File="BudgetAmountBL.cs" Line="135">'BudgetAmountBL.CategoryValueFetch(int, int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#DefaultCategoryValueFetch(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\Areas\Admin\BL" File="BudgetAmountBL.cs" Line="182">'BudgetAmountBL.DefaultCategoryValueFetch(int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#DefaultViewAllBudgetLineList(System.String,System.Int32,System.Int32,System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\Areas\Admin\BL" File="BudgetAmountBL.cs" Line="463">'BudgetAmountBL.DefaultViewAllBudgetLineList(string, int, int, string, string)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ReportTypefetch()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\Areas\Admin\BL" File="BudgetAmountBL.cs" Line="217">'BudgetAmountBL.ReportTypefetch()' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
@@ -104,14 +104,14 @@
          <Members>
           <Member Name="#ShowAllBudgetTypes(System.String,System.Int32,System.Int32,System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\Areas\Admin\BL" File="BudgetTypeBL.cs" Line="133">'BudgetTypeBL.ShowAllBudgetTypes(string, int, int, string, string)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#UserDelete(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\Areas\Admin\BL" File="BudgetTypeBL.cs" Line="85">'BudgetTypeBL.UserDelete(int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
@@ -122,42 +122,42 @@
          <Members>
           <Member Name="#BudgetTypefetch()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\Areas\Admin\BL" File="CategoryBL.cs" Line="341">'CategoryBL.BudgetTypefetch()' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Categoryfetch()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\Areas\Admin\BL" File="CategoryBL.cs" Line="307">'CategoryBL.Categoryfetch()' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#CategoryValueFetch(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\Areas\Admin\BL" File="CategoryBL.cs" Line="380">'CategoryBL.CategoryValueFetch(int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ShowCategory(System.String,System.Int32,System.Int32,System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\Areas\Admin\BL" File="CategoryBL.cs" Line="188">'CategoryBL.ShowCategory(string, int, int, string, string)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ShowCategoryValue(System.String,System.Int32,System.Int32,System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\Areas\Admin\BL" File="CategoryBL.cs" Line="274">'CategoryBL.ShowCategoryValue(string, int, int, string, string)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#UserDelete(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\Areas\Admin\BL" File="CategoryBL.cs" Line="113">'CategoryBL.UserDelete(int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
@@ -168,42 +168,42 @@
          <Members>
           <Member Name="#CategorySelectBind()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\Areas\Admin\BL" File="CompanyBL.cs" Line="99">'CompanyBL.CategorySelectBind()' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Categorytoselectlist()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\Areas\Admin\BL" File="CompanyBL.cs" Line="147">'CompanyBL.Categorytoselectlist()' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#CategoryValueFetch(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\Areas\Admin\BL" File="CompanyBL.cs" Line="195">'CompanyBL.CategoryValueFetch(int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#CompnaySelectedCategoryDelete(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\Areas\Admin\BL" File="CompanyBL.cs" Line="361">'CompanyBL.CompnaySelectedCategoryDelete(int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ShowAllCompany(System.String,System.Int32,System.Int32,System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\Areas\Admin\BL" File="CompanyBL.cs" Line="442">'CompanyBL.ShowAllCompany(string, int, int, string, string)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#UserSelectAssignedCategories(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\Areas\Admin\BL" File="CompanyBL.cs" Line="337">'CompanyBL.UserSelectAssignedCategories(int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
@@ -214,56 +214,56 @@
          <Members>
           <Member Name="#CategoryforKeyPointValueFetch(System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\Areas\Admin\BL" File="KeyPointBL.cs" Line="280">'KeyPointBL.CategoryforKeyPointValueFetch(int, int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#CategorytoselectforKeyPointlist(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\Areas\Admin\BL" File="KeyPointBL.cs" Line="167">'KeyPointBL.CategorytoselectforKeyPointlist(int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#DefaultCategoryforKeyPointValueFetch(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\Areas\Admin\BL" File="KeyPointBL.cs" Line="333">'KeyPointBL.DefaultCategoryforKeyPointValueFetch(int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#DefaultCategorytoselectforKeyPointlist()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\Areas\Admin\BL" File="KeyPointBL.cs" Line="228">'KeyPointBL.DefaultCategorytoselectforKeyPointlist()' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#DefaultShowAllKeyPointGroups(System.String,System.Int32,System.Int32,System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\Areas\Admin\BL" File="KeyPointBL.cs" Line="64">'KeyPointBL.DefaultShowAllKeyPointGroups(string, int, int, string, string)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#KeyPointSelectedCategoryDelete(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\Areas\Admin\BL" File="KeyPointBL.cs" Line="402">'KeyPointBL.KeyPointSelectedCategoryDelete(int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ShowAllKeyPointGroups(System.String,System.Int32,System.Int32,System.String,System.String,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\Areas\Admin\BL" File="KeyPointBL.cs" Line="34">'KeyPointBL.ShowAllKeyPointGroups(string, int, int, string, string, int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#UserSelectAssignedCategoriesforKeyPoint(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\Areas\Admin\BL" File="KeyPointBL.cs" Line="352">'KeyPointBL.UserSelectAssignedCategoriesforKeyPoint(int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
@@ -274,14 +274,14 @@
          <Members>
           <Member Name="#PagesDelete(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\Areas\Admin\BL" File="PagesBL.cs" Line="78">'PagesBL.PagesDelete(int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ViewAllContent(System.String,System.Int32,System.Int32,System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\Areas\Admin\BL" File="PagesBL.cs" Line="32">'PagesBL.ViewAllContent(string, int, int, string, string)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
@@ -292,14 +292,14 @@
          <Members>
           <Member Name="#ShowAllReportTypes(System.String,System.Int32,System.Int32,System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\Areas\Admin\BL" File="ReportTypeBL.cs" Line="133">'ReportTypeBL.ShowAllReportTypes(string, int, int, string, string)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#UserDelete(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\Areas\Admin\BL" File="ReportTypeBL.cs" Line="85">'ReportTypeBL.UserDelete(int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
@@ -314,169 +314,169 @@
          <Members>
           <Member Name="#AddmyBudgetCarCounts(SmartAdminMvc.Models.tblRealCarCount)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyAccountBL.cs" Line="1207">'CompanyAccountBL.AddmyBudgetCarCounts(tblRealCarCount)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyAccountBL.cs" Line="1211">'CompanyAccountBL.AddmyBudgetCarCounts(tblRealCarCount)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#AddMyBudgetLine(SmartAdminMvc.Models.tblRealBudget)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyAccountBL.cs" Line="1181">'CompanyAccountBL.AddMyBudgetLine(tblRealBudget)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyAccountBL.cs" Line="1185">'CompanyAccountBL.AddMyBudgetLine(tblRealBudget)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#BudgetLineDelete(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyAccountBL.cs" Line="1367">'CompanyAccountBL.BudgetLineDelete(int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyAccountBL.cs" Line="1371">'CompanyAccountBL.BudgetLineDelete(int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#BudgetLineDeleteWithrealBudget(System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyAccountBL.cs" Line="1391">'CompanyAccountBL.BudgetLineDeleteWithrealBudget(int, int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyAccountBL.cs" Line="1395">'CompanyAccountBL.BudgetLineDeleteWithrealBudget(int, int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#BudgetTypefetch()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyAccountBL.cs" Line="85">'CompanyAccountBL.BudgetTypefetch()' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Categoryfetch(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyAccountBL.cs" Line="46">'CompanyAccountBL.Categoryfetch(int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#CategoryValueFetch(System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyAccountBL.cs" Line="1036">'CompanyAccountBL.CategoryValueFetch(int, int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyAccountBL.cs" Line="1040">'CompanyAccountBL.CategoryValueFetch(int, int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#EditmyBudgetCarCounts(SmartAdminMvc.Models.tblRealCarCount)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyAccountBL.cs" Line="1245">'CompanyAccountBL.EditmyBudgetCarCounts(tblRealCarCount)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyAccountBL.cs" Line="1249">'CompanyAccountBL.EditmyBudgetCarCounts(tblRealCarCount)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#EditMybudgetLine(System.Int32,System.DateTime)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyAccountBL.cs" Line="319">'CompanyAccountBL.EditMybudgetLine(int, DateTime)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#EditMyCategoryValueFetch(System.Int32,System.Int32,System.DateTime)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyAccountBL.cs" Line="984">'CompanyAccountBL.EditMyCategoryValueFetch(int, int, DateTime)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyAccountBL.cs" Line="988">'CompanyAccountBL.EditMyCategoryValueFetch(int, int, DateTime)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#MyBudgetCarCount(System.Int32,System.DateTime)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyAccountBL.cs" Line="1442">'CompanyAccountBL.MyBudgetCarCount(int, DateTime)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyAccountBL.cs" Line="1446">'CompanyAccountBL.MyBudgetCarCount(int, DateTime)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#MyBudgetCarCountID(System.Int32,System.DateTime)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyAccountBL.cs" Line="1466">'CompanyAccountBL.MyBudgetCarCountID(int, DateTime)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyAccountBL.cs" Line="1470">'CompanyAccountBL.MyBudgetCarCountID(int, DateTime)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#MyBudgetDelete(System.Int32,System.DateTime)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyAccountBL.cs" Line="1418">'CompanyAccountBL.MyBudgetDelete(int, DateTime)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyAccountBL.cs" Line="1422">'CompanyAccountBL.MyBudgetDelete(int, DateTime)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#MybudgetLine(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyAccountBL.cs" Line="137">'CompanyAccountBL.MybudgetLine(int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#MybudgetLinesWithFilter(System.Int32,System.DateTime)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyAccountBL.cs" Line="270">'CompanyAccountBL.MybudgetLinesWithFilter(int, DateTime)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#MybudgetLineWithFilter(System.Int32,System.DateTime)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyAccountBL.cs" Line="194">'CompanyAccountBL.MybudgetLineWithFilter(int, DateTime)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#MyCategoryValueFetch(System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyAccountBL.cs" Line="380">'CompanyAccountBL.MyCategoryValueFetch(int, int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#MyCategoryValueFetchWithfilter(System.Int32,System.Int32,System.DateTime)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyAccountBL.cs" Line="456">'CompanyAccountBL.MyCategoryValueFetchWithfilter(int, int, DateTime)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyAccountBL.cs" Line="457">'CompanyAccountBL.MyCategoryValueFetchWithfilter(int, int, DateTime)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#MyCategoryValuesFetchWithfilter(System.Int32,System.Int32,System.DateTime)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyAccountBL.cs" Line="629">'CompanyAccountBL.MyCategoryValuesFetchWithfilter(int, int, DateTime)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyAccountBL.cs" Line="630">'CompanyAccountBL.MyCategoryValuesFetchWithfilter(int, int, DateTime)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ReportTypefetch()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyAccountBL.cs" Line="1072">'CompanyAccountBL.ReportTypefetch()' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyAccountBL.cs" Line="1076">'CompanyAccountBL.ReportTypefetch()' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#UpdateMyBudget(SmartAdminMvc.Models.tblRealBudget,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyAccountBL.cs" Line="1348">'CompanyAccountBL.UpdateMyBudget(tblRealBudget, int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyAccountBL.cs" Line="1352">'CompanyAccountBL.UpdateMyBudget(tblRealBudget, int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ViewAllBudgetLineList(System.String,System.Int32,System.Int32,System.String,System.String,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyAccountBL.cs" Line="1531">'CompanyAccountBL.ViewAllBudgetLineList(string, int, int, string, string, int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyAccountBL.cs" Line="1535">'CompanyAccountBL.ViewAllBudgetLineList(string, int, int, string, string, int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ViewAllMyBudgetList(System.String,System.Int32,System.Int32,System.String,System.String,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyAccountBL.cs" Line="1590">'CompanyAccountBL.ViewAllMyBudgetList(string, int, int, string, string, int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyAccountBL.cs" Line="1594">'CompanyAccountBL.ViewAllMyBudgetList(string, int, int, string, string, int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ViewDateofMyBudgetList(System.String,System.Int32,System.Int32,System.String,System.String,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyAccountBL.cs" Line="1626">'CompanyAccountBL.ViewDateofMyBudgetList(string, int, int, string, string, int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyAccountBL.cs" Line="1630">'CompanyAccountBL.ViewDateofMyBudgetList(string, int, int, string, string, int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -486,28 +486,28 @@
          <Members>
           <Member Name="#BudgetTypefetch()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyParameterBL.cs" Line="90">'CompanyParameterBL.BudgetTypefetch()' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Categoryfetch()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyParameterBL.cs" Line="122">'CompanyParameterBL.Categoryfetch()' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ParameterCategoryValueFetch(System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyParameterBL.cs" Line="162">'CompanyParameterBL.ParameterCategoryValueFetch(int, int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ShowParameters(System.String,System.Int32,System.Int32,System.String,System.String,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyParameterBL.cs" Line="60">'CompanyParameterBL.ShowParameters(string, int, int, string, string, int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
@@ -518,64 +518,64 @@
          <Members>
           <Member Name="#CategoryParameterslistfetch(System.Int32,System.DateTime,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyReportBL.cs" Line="352">'CompanyReportBL.CategoryParameterslistfetch(int, DateTime, int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyReportBL.cs" Line="354">'CompanyReportBL.CategoryParameterslistfetch(int, DateTime, int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#grosprofitlistfetch(System.Int32,System.Int32,System.Int32,System.DateTime,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyReportBL.cs" Line="302">'CompanyReportBL.grosprofitlistfetch(int, int, int, DateTime, int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyReportBL.cs" Line="304">'CompanyReportBL.grosprofitlistfetch(int, int, int, DateTime, int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#IncomVScostofsalelistfetch(System.Int32,System.DateTime,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyReportBL.cs" Line="246">'CompanyReportBL.IncomVScostofsalelistfetch(int, DateTime, int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyReportBL.cs" Line="248">'CompanyReportBL.IncomVScostofsalelistfetch(int, DateTime, int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#MyBudgetCarCount(System.Int32,System.DateTime)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyReportBL.cs" Line="444">'CompanyReportBL.MyBudgetCarCount(int, DateTime)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyReportBL.cs" Line="446">'CompanyReportBL.MyBudgetCarCount(int, DateTime)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#MyBudgetYearlyCarCount(System.Int32,System.DateTime)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyReportBL.cs" Line="468">'CompanyReportBL.MyBudgetYearlyCarCount(int, DateTime)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyReportBL.cs" Line="470">'CompanyReportBL.MyBudgetYearlyCarCount(int, DateTime)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#weekAmountlistfetch(System.Int32,System.DateTime,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyReportBL.cs" Line="56">'CompanyReportBL.weekAmountlistfetch(int, DateTime, int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#weekLybudgetlistfetch(System.Int32,System.DateTime,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyReportBL.cs" Line="126">'CompanyReportBL.weekLybudgetlistfetch(int, DateTime, int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyReportBL.cs" Line="128">'CompanyReportBL.weekLybudgetlistfetch(int, DateTime, int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#weekLycarcountlistfetch(System.DateTime,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyReportBL.cs" Line="178">'CompanyReportBL.weekLycarcountlistfetch(DateTime, int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyReportBL.cs" Line="180">'CompanyReportBL.weekLycarcountlistfetch(DateTime, int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#weeklyParameterslistfetch(System.Int32,System.DateTime,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyReportBL.cs" Line="420">'CompanyReportBL.weeklyParameterslistfetch(int, DateTime, int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="CompanyReportBL.cs" Line="422">'CompanyReportBL.weeklyParameterslistfetch(int, DateTime, int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -585,21 +585,21 @@
          <Members>
           <Member Name="#CheckUserEmailEXist(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="UserCompnyBL.cs" Line="58">'UserCompnyBL.CheckUserEmailEXist(string)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#CheckUserLogin(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="UserCompnyBL.cs" Line="32">'UserCompnyBL.CheckUserLogin(string, string)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ContentpageListfetch()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2017-12-24 07:43:12Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-10-09 07:49:58Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="I:\Rick\Rick\AccountManagementSW\webapp\BL" File="UserCompnyBL.cs" Line="121">'UserCompnyBL.ContentpageListfetch()' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
            </Messages>

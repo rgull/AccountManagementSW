@@ -170,7 +170,8 @@
                                                 <div class="widget-body">
 
                                                     <input type="hidden" Id="hdnCategory-@item.keyPointid" class="csscategory" value="@item.keyPointid" />
-
+                                                    @* RGK  04-28-18 - To get Group Name, Assign IDs to labels*@
+                                                    <input type="hidden" Id="hdnCategoryName-@item.keyPointid" value="@item.groupName" />
                                                     <label class="spidodivleb">
                                                         @*<i></i> @item.weekAmountlist[i].mybugetweek1 /
                                                             <i></i> @item.weekAmountlist[i].bugetLineweek1*@
@@ -182,8 +183,8 @@
                                                         <input type="hidden" Id="groupName-@item.keyPointid" value="@item.groupName" />
                                                         @*@Html.HiddenFor(m => item.weekAmountlist[i].mybugetweek1, new { id= "mybugetweek1-"+item.categoryId , value = item.weekAmountlist[i].mybugetweek1, name = "mybugetweek1-" + item.categoryId })
                                                             @Html.HiddenFor(m => item.weekAmountlist[i].bugetLineweek1, new { id = "bugetLineweek1-"+ item.categoryId , value = item.weekAmountlist[i].bugetLineweek1, name = "bugetLineweek1-" + item.categoryId })*@
-                                                        @*<canvas id="pieChart@(i)@item.categoryId" height="60"><script> initializeCanvas(@item.weekAmountlist[i].mybugetweek1,@item.weekAmountlist[i].bugetLineweek1,pieChart@(i)@item.categoryId); </script></canvas>*@
-                                                        <div id="chart_div-@item.keyPointid" style="width: 400px; height: 150px;"></div>
+                                                      
+                                                         <div id="chart_div-@item.keyPointid" style="width: 400px; height: 150px;"></div>
 
                                                         @*<canvas id="pieChart-@item.categoryId" height="120" width="100"></canvas>*@
                                                        
@@ -452,7 +453,7 @@
                         var KeyPointTotal = $("#KeyPointTotal-" + val).val();
                         var Budget1GrossIncome = $("#Budget1GrossIncome-" + val).val();
                         var groupName = $("#groupName-" + val).val();
-                        
+                        var diff = (parseFloat(KeyPointTotal) - parseFloat(Budget1TotalIncome)).toFixed(3);
                         if(KeyPointTotal<0)
                         {
                             KeyPointTotal=0;
@@ -466,7 +467,8 @@
                     {
                         data = google.visualization.arrayToDataTable([
                             ['Label', 'Value'],
-                            ['', { v: Math.round(KeyPointTotal), f: Budget1GrossIncome.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") }]
+                            //['', { v: Math.round(KeyPointTotal), f: Budget1GrossIncome.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") }]
+                            ['', { v: Math.round(KeyPointTotal), f: diff }]
                         ]);
                     }
                  
@@ -603,7 +605,13 @@
                 
                         var chart = new google.visualization.Gauge(document.getElementById('chart_div-'+val));
                         chart.draw(data, options);
-                                
+                        if (groupName == "NET TOTAL")
+                        {
+                            if(diff < 0){
+                                $(this).parent().find(('svg text:nth-child(1)')).attr('fill', '#ff0000');
+                            }
+                            
+                        }        
                     });
 
                     var data = google.visualization.arrayToDataTable([
@@ -632,6 +640,30 @@
 
                     var chart = new google.visualization.Gauge(document.getElementById('ChartOfTotal'));
                     chart.draw(data, options);
+                    
+                    $('#gaugeChartDiv iframe').each(function() {
+                        $('#chartArea svg text:first', this.contentWindow.document||this.contentDocument).attr('font-size', 20);
+                    });
+
+                    // make changes to appearance below
+
+                    //google.visualization.events.addListener(chart, 'ready', function () {
+                    //    $('#chart_div circle:nth-child(2)').attr('fill', 'red'); //background
+                    //    $('#chart_div circle:nth-child(2)').attr('stroke', 'gray');
+                    //    $('#chart_div circle:nth-child(2)').attr('stroke-width', '2');
+                    //    $('#chart_div circle:nth-child(1)').attr('fill', 'black'); //outer-ring
+                    //    $('#chart_div circle:nth-child(1)').attr('stroke-width', '1');
+                    //    $('#chart_div circle:nth-child(1)').attr('stroke', 'gray');
+                    //    $('#chart_div circle:nth-child(3)').attr('fill', '#666666'); //the circle pointer
+                    //    $('#chart_div circle:nth-child(3)').attr('stroke', 'white');
+                    //    $('#chart_div text').attr('fill', 'white');
+                    //    $('#chart_div text:nth-child(1)').attr('fill', 'white');
+                    //    $('#chart_div text:nth-child(1)').attr('font-size', '33');
+                    //    $('#chart_div text').attr('left');
+                    //    $('#chart_div path:nth-child(2)').attr('fill', '#FC6C05');
+                    //    $('#chart_div path:nth-child(2)').attr('stroke', 'white');
+                    //    $('#chart_div path:nth-child(2)').attr('fill-opacity', '2');
+                    //});
                 }
 
                     })
@@ -677,6 +709,9 @@
                 var Budget1GrossIncome = $("#Budget1TotalIncome-" + val).val();
                 var KeyPointTotal = $("#KeyPointTotal-" + val).val();
                 var KeyGrossIncome = $("#KeyPointTotal-" + val).val();
+                // RGK 04-28-18
+                // For separate towing calculations
+                var groupName = $("#hdnCategoryName-" + val).val();
                 if(KeyPointTotal<0)
                 {
                     KeyPointTotal=0;
@@ -716,7 +751,11 @@
                     // alert(Percentage);
                     TotalofExpance = parseFloat(TotalofExpance) + parseFloat(KeyPointTotal);
                 }
-                 var difference = (100-((parseFloat(Budget1TotalIncome)/parseFloat(KeyPointTotal))*100));
+                var difference = (100-((parseFloat(Budget1TotalIncome)/parseFloat(KeyPointTotal))*100));
+                if(groupName == "SUBLET & TOWING"){
+                    difference = (parseFloat(KeyPointTotal)/parseFloat(Budget1TotalIncome))*100;
+                    console.log('Sublet: ', difference);
+                }
                  var isNetprofit = $("#isNet-"+val).val();
             // alert(difference);
                  if(isNetprofit == "")

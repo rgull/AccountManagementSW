@@ -157,7 +157,9 @@
                                             -->
                                             <header class="con_titel">
 
-                                                <h2>@Html.DisplayFor(modelitem => item.groupName)</h2>
+                                                 
+                                                 <h2>@Html.DisplayFor(modelitem => item.groupName)</h2>
+                                                
 
                                             </header>
 
@@ -174,7 +176,8 @@
                                                 <div class="widget-body">
 
                                                     <input type="hidden" Id="hdnCategory-@item.keyPointid" class="csscategory" value="@item.keyPointid" />
-
+                                                    @* RGK  04-28-18 - To get Group Name, Assign IDs to labels*@
+                                                    <input type="hidden" Id="hdnCategoryName-@item.keyPointid"  value="@item.groupName" />
                                                     <label class="spidodivleb">
                                                         @*<i></i> @item.weekAmountlist[i].mybugetweek1 /
                                                             <i></i> @item.weekAmountlist[i].bugetLineweek1*@
@@ -456,7 +459,7 @@
                         var KeyPointTotal = $("#KeyPointTotal-" + val).val();
                         var Budget1GrossIncome = $("#Budget1GrossIncome-" + val).val();
                         var groupName = $("#groupName-" + val).val();
-
+                        var diff = (parseFloat(KeyPointTotal) - parseFloat(Budget1TotalIncome)).toFixed(3);
                         if(KeyPointTotal<0)
                         {
                             KeyPointTotal=0;
@@ -468,15 +471,19 @@
                         ]);
                     if (groupName == "NET TOTAL")
                     {
+                        debugger;
                         data = google.visualization.arrayToDataTable([
                             ['Label', 'Value'],
-                            ['', { v: Math.round(KeyPointTotal), f: Budget1GrossIncome.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") }]
+                            //['', { v: Math.round(KeyPointTotal), f: Budget1GrossIncome.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") }]
+                            //RGK 04-14-2018
+                            ['', { v: Math.round(KeyPointTotal), f: diff }]
                         ]);
                     }
 
                     var MaxLimint= Math.round(Budget1TotalIncome)*2 ;
                     var MinLimit=Math.round(Budget1TotalIncome)/2 ;
                     var difference = (100-((parseFloat(Budget1TotalIncome)/parseFloat(KeyPointTotal))*100));
+                   
                     var Percentage = $("#Percentage-"+val).val();
                     var isNetprofit = $("#isNet-"+val).val();
                     //alert(isNetprofit);
@@ -607,6 +614,14 @@
 
                         var chart = new google.visualization.Gauge(document.getElementById('chart_div-'+val));
                         chart.draw(data, options);
+                        //RGK 04-14-2018
+                        if (groupName == "NET TOTAL")
+                        {
+                            if(diff < 0){
+                                $(this).parent().find(('svg text:nth-child(1)')).attr('fill', '#ff0000');
+                            }
+                            
+                        }     
 
                     });
 
@@ -652,6 +667,7 @@
         var TotalofGrossIncome = 0;
         $("input.csscategory").each(function() {
             //alert("in");
+            
             var val = $(this).val();
             //alert(val);
 
@@ -681,6 +697,10 @@
                 var Budget1GrossIncome = $("#Budget1TotalIncome-" + val).val();
                 var KeyPointTotal = $("#KeyPointTotal-" + val).val();
                 var KeyGrossIncome = $("#KeyPointTotal-" + val).val();
+                // RGK 04-28-18
+            // For separate towing calculations
+                var groupName = $("#hdnCategoryName-" + val).val();
+               
                 if(KeyPointTotal<0)
                 {
                     KeyPointTotal=0;
@@ -720,7 +740,11 @@
                     // alert(Percentage);
                     TotalofExpance = parseFloat(TotalofExpance) + parseFloat(KeyPointTotal);
                 }
-                 var difference = (100-((parseFloat(Budget1TotalIncome)/parseFloat(KeyPointTotal))*100));
+                var difference = (100-((parseFloat(Budget1TotalIncome)/parseFloat(KeyPointTotal))*100));
+                if(groupName == "SUBLET & TOWING"){
+                    difference = (parseFloat(KeyPointTotal)/parseFloat(Budget1TotalIncome))*100;
+                    console.log('Sublet: ', difference);
+                }
                  var isNetprofit = $("#isNet-"+val).val();
             // alert(difference);
                  if(isNetprofit == "")

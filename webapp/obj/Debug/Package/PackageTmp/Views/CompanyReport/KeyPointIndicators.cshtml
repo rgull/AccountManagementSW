@@ -1,4 +1,5 @@
-﻿@model List<SmartAdminMvc.Models.KeyPointIndicators>
+﻿@*@model List<SmartAdminMvc.Models.KeyPointIndicators>*@
+@model KeyPointIndicatorModel
 @{
     ViewBag.Title = "KeyPointIndicators";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
@@ -106,7 +107,7 @@
             <div class="widget-body no-padding">
                 @*<div id="chart_div" style="width: 400px; height: 120px;"></div>*@
                 <table id="datatable_tabletools" class="table table-striped table-bordered table-hover" width="100%">
-                    @if (Model.Count() > 0)
+                    @if (Model.KeyPointIndicators.Count() > 0)
                     {
                         <thead>
                             <tr>
@@ -118,11 +119,20 @@
                         </thead>
                     }
                     <tbody>
-                        @if (Model.Count() > 0)
+                        <tr>
+                            <td>
+                                <span class="ReportCategoryName">
+                                    Income: <lebel id="lbltotalincomwithoutdiscount">@System.Configuration.ConfigurationManager.AppSettings["CurrencySymbol"].ToString()@String.Format("{0:N2}", Model.Income)</lebel><br />
+                                    Car Count: <lebel id="lblCarCounts">@Model.CarCount</lebel><br />
+                                    Average ticket: <lebel id="lblavragetckit">@System.Configuration.ConfigurationManager.AppSettings["CurrencySymbol"].ToString()@String.Format("{0:N2}", Model.AverageTicketValue)</lebel>
+                                </span>
+                            </td>
+                        </tr>
+                        @if (Model.KeyPointIndicators.Count() > 0)
                         {
                             <tr>
                                 <td>
-                                    @foreach (var item in Model)
+                                    @foreach (var item in Model.KeyPointIndicators)
                                     {
 
 

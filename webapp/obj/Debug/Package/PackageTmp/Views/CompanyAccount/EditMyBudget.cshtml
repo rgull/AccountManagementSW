@@ -32,7 +32,7 @@
                                 <label class="label"> Car Counts</label>
                                 <div class="input">
                                     <i></i>
-                                    @*@Html.TextBoxFor(model => model.date, new { @class = "form-control datepicker", @required = "required", placeholder = "Expected date here..." })*@
+                                    @*@Html.TextBoxFor(model => model.date, new { @class = "form-control datepicker", @required = "required", placeholder = "Expected date here..." })*@                                    
                                     @Html.TextBoxFor(m => m.carCounts, new { @class = "form-control", id = "carcounts", @required = "required" })
                                     @*<input id="finishdate" class="form-control hasDatepicker" type="text" placeholder="Expected finish date" name="finishdate">*@
                                     @Html.HiddenFor(m => m.carCountId)
