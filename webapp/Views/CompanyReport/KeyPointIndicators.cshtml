@@ -459,18 +459,19 @@
                             KeyPointTotal=0;
                             $("#chart_div-"+val).visualization=false; 
                         }
-                    var data = google.visualization.arrayToDataTable([
-                      ['Label', 'Value'],
-                      ['', Math.round(KeyPointTotal)]
+                        //RGK 09-10-2018. Show Difference Value for all Categories except Towing
+                        var data = google.visualization.arrayToDataTable([
+                                ['Label', 'Value'],                            
+                                ['', { v: Math.round(KeyPointTotal), f: diff }]
                         ]);
-                    if (groupName == "NET TOTAL")
-                    {
-                        data = google.visualization.arrayToDataTable([
-                            ['Label', 'Value'],
-                            //['', { v: Math.round(KeyPointTotal), f: Budget1GrossIncome.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") }]
-                            ['', { v: Math.round(KeyPointTotal), f: diff }]
-                        ]);
-                    }
+                        if (groupName == "SUBLET & TOWING")
+                        {
+                        
+                            data = google.visualization.arrayToDataTable([
+                          ['Label', 'Value'],
+                          ['', Math.round(KeyPointTotal)]
+                            ]);
+                        }
                  
                     var MaxLimint= Math.round(Budget1TotalIncome)*2 ;
                     var MinLimit=Math.round(Budget1TotalIncome)/2 ;
@@ -605,14 +606,14 @@
                 
                         var chart = new google.visualization.Gauge(document.getElementById('chart_div-'+val));
                         chart.draw(data, options);
-                        if (groupName == "NET TOTAL")
+                        //RGK 09-10-2018. Show Difference Value for all Categories except Towing
+                        if (groupName != "SUBLET & TOWING")
                         {
                             if(diff < 0){
                                 $(this).parent().find(('svg text:nth-child(1)')).attr('fill', '#ff0000');
                             }
                             
-                        }        
-                    });
+                        }                        });
 
                     var data = google.visualization.arrayToDataTable([
                         ['Label', 'Value'],
