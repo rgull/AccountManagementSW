@@ -607,13 +607,26 @@
                         var chart = new google.visualization.Gauge(document.getElementById('chart_div-'+val));
                         chart.draw(data, options);
                         //RGK 09-10-2018. Show Difference Value for all Categories except Towing
-                        if (groupName != "SUBLET & TOWING")
+                        //if (groupName != "SUBLET & TOWING" && groupName != "NET TOTAL")
+                        //{
+                        //    debugger;
+                        //    var half = Math.round(KeyPointTotal)/2;
+                        //    if(diff > half){
+                        //        $(this).parent().find(('svg text:nth-child(1)')).attr('fill', '#ff0000');
+                        //    }
+                            
+                        //}   
+                        
+                        //RGK 10-17-2018. Show Black in case of negative values, Red in case of Positive values
+                        // for all items except Net Total
+                        if (groupName == "NET TOTAL")
                         {
                             if(diff < 0){
                                 $(this).parent().find(('svg text:nth-child(1)')).attr('fill', '#ff0000');
                             }
                             
-                        }                        });
+                        }   
+                    });
 
                     var data = google.visualization.arrayToDataTable([
                         ['Label', 'Value'],

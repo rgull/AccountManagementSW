@@ -627,20 +627,20 @@
                         var chart = new google.visualization.Gauge(document.getElementById('chart_div-'+val));
                         chart.draw(data, options);
                         //RGK 04-14-2018
-                        //if (groupName == "NET TOTAL")
-                        //{
-                        //    if(diff < 0){
-                        //        $(this).parent().find(('svg text:nth-child(1)')).attr('fill', '#ff0000');
-                        //    }
-                            
-                        //}   
-                        if (groupName != "SUBLET & TOWING")
+                        if (groupName == "NET TOTAL")
                         {
                             if(diff < 0){
                                 $(this).parent().find(('svg text:nth-child(1)')).attr('fill', '#ff0000');
                             }
                             
-                        }     
+                        }   
+                        //if (groupName != "SUBLET & TOWING")
+                        //{
+                        //    if(diff < 0){
+                        //        $(this).parent().find(('svg text:nth-child(1)')).attr('fill', '#ff0000');
+                        //    }
+                            
+                        //}     
 
                     });
 
