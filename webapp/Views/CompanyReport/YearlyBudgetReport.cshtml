@@ -634,13 +634,16 @@
                             }
                             
                         }   
-                        //if (groupName != "SUBLET & TOWING")
-                        //{
-                        //    if(diff < 0){
-                        //        $(this).parent().find(('svg text:nth-child(1)')).attr('fill', '#ff0000');
-                        //    }
+                        //RGK 09-10-2018. Show Difference Value for all Categories except Towing
+                        if (groupName != "SUBLET & TOWING" && groupName != "NET TOTAL")
+                        {
+                            debugger;
                             
-                        //}     
+                            if(KeyPointTotal > Budget1TotalIncome){
+                                $(this).parent().find(('svg text:nth-child(1)')).attr('fill', '#ff0000');
+                            }
+                            
+                        }    
 
                     });
 

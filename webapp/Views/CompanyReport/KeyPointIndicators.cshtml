@@ -454,6 +454,7 @@
                         var Budget1GrossIncome = $("#Budget1GrossIncome-" + val).val();
                         var groupName = $("#groupName-" + val).val();
                         var diff = (parseFloat(KeyPointTotal) - parseFloat(Budget1TotalIncome)).toFixed(3);
+                        //console.log('groupName: ' + groupName + ' ,Budget1TotalIncome: ' + Budget1TotalIncome + ' ,KeyPointTotal' + KeyPointTotal + ' ,Budget1GrossIncome: ' + Budget1GrossIncome )
                         if(KeyPointTotal<0)
                         {
                             KeyPointTotal=0;
@@ -478,7 +479,7 @@
                     var difference = (100-((parseFloat(Budget1TotalIncome)/parseFloat(KeyPointTotal))*100));
                     var Percentage = $("#Percentage-"+val).val();
                     var isNetprofit = $("#isNet-"+val).val();
-                    //alert(isNetprofit);
+                    //console.log('Net Profit: ',isNetprofit);
                     if(isNetprofit == "")
                     {
                         if(( MinLimit > Math.round(KeyPointTotal)) || ( MaxLimint < Math.round(KeyPointTotal)))
@@ -607,15 +608,15 @@
                         var chart = new google.visualization.Gauge(document.getElementById('chart_div-'+val));
                         chart.draw(data, options);
                         //RGK 09-10-2018. Show Difference Value for all Categories except Towing
-                        //if (groupName != "SUBLET & TOWING" && groupName != "NET TOTAL")
-                        //{
-                        //    debugger;
-                        //    var half = Math.round(KeyPointTotal)/2;
-                        //    if(diff > half){
-                        //        $(this).parent().find(('svg text:nth-child(1)')).attr('fill', '#ff0000');
-                        //    }
+                        if (groupName != "SUBLET & TOWING" && groupName != "NET TOTAL")
+                        {
+                            debugger;
                             
-                        //}   
+                            if(KeyPointTotal > Budget1TotalIncome){
+                                $(this).parent().find(('svg text:nth-child(1)')).attr('fill', '#ff0000');
+                            }
+                            
+                        }   
                         
                         //RGK 10-17-2018. Show Black in case of negative values, Red in case of Positive values
                         // for all items except Net Total
