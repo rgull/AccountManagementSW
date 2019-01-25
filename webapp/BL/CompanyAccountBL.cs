@@ -926,7 +926,26 @@ namespace SmartAdminMvc.BL
                                     mycatTypeList.id = obj[i].id;
                                     mycatTypeList.budget = obj[i].budget;
                                     mycatTypeList.MyBudgetid = obj[i].mybudgetId;
-                                    categoryTypeList.Add(mycatTypeList);
+                                    if (checkOnceInmonth(obj[i].id, CompanyId, date) > 0)
+                                    {
+                                        mycatTypeList.isAddOnceInMonth = true;
+                                        decimal lastWeekValue = HaveentryInOnceInmonth(obj[i].id, CompanyId, date);
+                                        if (lastWeekValue == 0)
+                                        {
+                                            mycatTypeList.IsDisabled = false;
+                                        }
+                                        else
+                                        {
+                                            mycatTypeList.IsDisabled = true;
+                                            mycatTypeList.budget = lastWeekValue;
+                                        }
+                                        categoryTypeList.Add(mycatTypeList);
+                                    }
+                                    else
+                                    {
+                                        categoryTypeList.Add(mycatTypeList);
+                                    }
+                                    
                                 }
                             }
                             else
@@ -947,7 +966,7 @@ namespace SmartAdminMvc.BL
                                         cmycatTypeList.IsDisabled = false;
                                     }
                                     else
-                                    {                                        
+                                    {
                                         var cmycatTypeList = new MyParameterList();
                                         cmycatTypeList.name = allcat[c].name;
                                         cmycatTypeList.id = CatId;
