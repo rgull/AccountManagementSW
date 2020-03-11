@@ -542,6 +542,8 @@
     <Property Name="isActive" Type="Boolean" />
     <Property Name="createDate" Type="DateTime" Precision="3" />
     <Property Name="updateDate" Type="DateTime" Precision="3" />
+    <Property Name="metaTitle" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="metaDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="tblKeyPointBudgetLine">
     <Key>

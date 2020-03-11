@@ -241,6 +241,8 @@
     <EntitySetMapping Name="tblContentPages">
       <EntityTypeMapping TypeName="AccountManagement_dbEntities.tblContentPage">
         <MappingFragment StoreEntitySet="tblContentPages">
+          <ScalarProperty Name="metaDescription" ColumnName="metaDescription" />
+          <ScalarProperty Name="metaTitle" ColumnName="metaTitle" />
           <ScalarProperty Name="updateDate" ColumnName="updateDate" />
           <ScalarProperty Name="createDate" ColumnName="createDate" />
           <ScalarProperty Name="isActive" ColumnName="isActive" />

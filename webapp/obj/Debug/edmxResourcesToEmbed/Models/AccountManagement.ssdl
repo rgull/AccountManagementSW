@@ -195,6 +195,8 @@
     <Property Name="isActive" Type="bit" />
     <Property Name="createDate" Type="datetime" />
     <Property Name="updateDate" Type="datetime" />
+    <Property Name="metaTitle" Type="nvarchar" MaxLength="200" />
+    <Property Name="metaDescription" Type="text" />
   </EntityType>
   <EntityType Name="tblExpectedBudgetLine">
     <Key>
@@ -269,7 +271,7 @@
     <Property Name="createDate" Type="datetime" Nullable="false" />
     <Property Name="isActive" Type="bit" />
   </EntityType>
-  <Association Name="FK__tblCatego__budge__351DDF8C">
+  <Association Name="FK__tblCatego__budge__6B24EA82">
     <End Role="tblBudgetType" Type="Self.tblBudgetType" Multiplicity="1" />
     <End Role="tblCategory" Type="Self.tblCategory" Multiplicity="*" />
     <ReferentialConstraint>
@@ -281,7 +283,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__tblcompan__categ__361203C5">
+  <Association Name="FK__tblcompan__categ__6C190EBB">
     <End Role="tblCategory" Type="Self.tblCategory" Multiplicity="1" />
     <End Role="tblcompanyCategory" Type="Self.tblcompanyCategory" Multiplicity="*" />
     <ReferentialConstraint>
@@ -293,7 +295,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__tblcompan__compa__370627FE">
+  <Association Name="FK__tblcompan__compa__6D0D32F4">
     <End Role="tblCompany" Type="Self.tblCompany" Multiplicity="1" />
     <End Role="tblcompanyCategory" Type="Self.tblcompanyCategory" Multiplicity="*" />
     <ReferentialConstraint>
@@ -305,7 +307,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__tblExpect__budge__37FA4C37">
+  <Association Name="FK__tblExpect__budge__6E01572D">
     <End Role="tblBudgetType" Type="Self.tblBudgetType" Multiplicity="1" />
     <End Role="tblExpectedBudgetLine" Type="Self.tblExpectedBudgetLine" Multiplicity="*" />
     <ReferentialConstraint>
@@ -317,7 +319,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__tblExpect__categ__38EE7070">
+  <Association Name="FK__tblExpect__categ__6EF57B66">
     <End Role="tblCategory" Type="Self.tblCategory" Multiplicity="1" />
     <End Role="tblExpectedBudgetLine" Type="Self.tblExpectedBudgetLine" Multiplicity="*" />
     <ReferentialConstraint>
@@ -329,7 +331,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__tblExpect__repor__39E294A9">
+  <Association Name="FK__tblExpect__repor__6FE99F9F">
     <End Role="tblReportType" Type="Self.tblReportType" Multiplicity="1" />
     <End Role="tblExpectedBudgetLine" Type="Self.tblExpectedBudgetLine" Multiplicity="*" />
     <ReferentialConstraint>
@@ -341,7 +343,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__tblKeyPoi__compa__70FDBF69">
+  <Association Name="FK__tblKeyPoi__compa__73BA3083">
     <End Role="tblCompany" Type="Self.tblCompany" Multiplicity="0..1" />
     <End Role="tblKeyPointGroup" Type="Self.tblKeyPointGroup" Multiplicity="*" />
     <ReferentialConstraint>
@@ -353,7 +355,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__tblRealBu__budge__3BCADD1B">
+  <Association Name="FK__tblRealBu__budge__74AE54BC">
     <End Role="tblBudgetType" Type="Self.tblBudgetType" Multiplicity="1" />
     <End Role="tblRealBudget" Type="Self.tblRealBudget" Multiplicity="*" />
     <ReferentialConstraint>
@@ -365,7 +367,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__tblRealBu__categ__3CBF0154">
+  <Association Name="FK__tblRealBu__categ__75A278F5">
     <End Role="tblCategory" Type="Self.tblCategory" Multiplicity="1" />
     <End Role="tblRealBudget" Type="Self.tblRealBudget" Multiplicity="*" />
     <ReferentialConstraint>
@@ -574,39 +576,39 @@
     <EntitySet Name="tblRealBudget" EntityType="Self.tblRealBudget" Schema="managementsoftware" store:Type="Tables" />
     <EntitySet Name="tblRealCarCounts" EntityType="Self.tblRealCarCounts" Schema="managementsoftware" store:Type="Tables" />
     <EntitySet Name="tblReportType" EntityType="Self.tblReportType" Schema="managementsoftware" store:Type="Tables" />
-    <AssociationSet Name="FK__tblCatego__budge__351DDF8C" Association="Self.FK__tblCatego__budge__351DDF8C">
+    <AssociationSet Name="FK__tblCatego__budge__6B24EA82" Association="Self.FK__tblCatego__budge__6B24EA82">
       <End Role="tblBudgetType" EntitySet="tblBudgetType" />
       <End Role="tblCategory" EntitySet="tblCategory" />
     </AssociationSet>
-    <AssociationSet Name="FK__tblcompan__categ__361203C5" Association="Self.FK__tblcompan__categ__361203C5">
+    <AssociationSet Name="FK__tblcompan__categ__6C190EBB" Association="Self.FK__tblcompan__categ__6C190EBB">
       <End Role="tblCategory" EntitySet="tblCategory" />
       <End Role="tblcompanyCategory" EntitySet="tblcompanyCategory" />
     </AssociationSet>
-    <AssociationSet Name="FK__tblcompan__compa__370627FE" Association="Self.FK__tblcompan__compa__370627FE">
+    <AssociationSet Name="FK__tblcompan__compa__6D0D32F4" Association="Self.FK__tblcompan__compa__6D0D32F4">
       <End Role="tblCompany" EntitySet="tblCompany" />
       <End Role="tblcompanyCategory" EntitySet="tblcompanyCategory" />
     </AssociationSet>
-    <AssociationSet Name="FK__tblExpect__budge__37FA4C37" Association="Self.FK__tblExpect__budge__37FA4C37">
+    <AssociationSet Name="FK__tblExpect__budge__6E01572D" Association="Self.FK__tblExpect__budge__6E01572D">
       <End Role="tblBudgetType" EntitySet="tblBudgetType" />
       <End Role="tblExpectedBudgetLine" EntitySet="tblExpectedBudgetLine" />
     </AssociationSet>
-    <AssociationSet Name="FK__tblExpect__categ__38EE7070" Association="Self.FK__tblExpect__categ__38EE7070">
+    <AssociationSet Name="FK__tblExpect__categ__6EF57B66" Association="Self.FK__tblExpect__categ__6EF57B66">
       <End Role="tblCategory" EntitySet="tblCategory" />
       <End Role="tblExpectedBudgetLine" EntitySet="tblExpectedBudgetLine" />
     </AssociationSet>
-    <AssociationSet Name="FK__tblExpect__repor__39E294A9" Association="Self.FK__tblExpect__repor__39E294A9">
+    <AssociationSet Name="FK__tblExpect__repor__6FE99F9F" Association="Self.FK__tblExpect__repor__6FE99F9F">
       <End Role="tblReportType" EntitySet="tblReportType" />
       <End Role="tblExpectedBudgetLine" EntitySet="tblExpectedBudgetLine" />
     </AssociationSet>
-    <AssociationSet Name="FK__tblKeyPoi__compa__70FDBF69" Association="Self.FK__tblKeyPoi__compa__70FDBF69">
+    <AssociationSet Name="FK__tblKeyPoi__compa__73BA3083" Association="Self.FK__tblKeyPoi__compa__73BA3083">
       <End Role="tblCompany" EntitySet="tblCompany" />
       <End Role="tblKeyPointGroup" EntitySet="tblKeyPointGroup" />
     </AssociationSet>
-    <AssociationSet Name="FK__tblRealBu__budge__3BCADD1B" Association="Self.FK__tblRealBu__budge__3BCADD1B">
+    <AssociationSet Name="FK__tblRealBu__budge__74AE54BC" Association="Self.FK__tblRealBu__budge__74AE54BC">
       <End Role="tblBudgetType" EntitySet="tblBudgetType" />
       <End Role="tblRealBudget" EntitySet="tblRealBudget" />
     </AssociationSet>
-    <AssociationSet Name="FK__tblRealBu__categ__3CBF0154" Association="Self.FK__tblRealBu__categ__3CBF0154">
+    <AssociationSet Name="FK__tblRealBu__categ__75A278F5" Association="Self.FK__tblRealBu__categ__75A278F5">
       <End Role="tblCategory" EntitySet="tblCategory" />
       <End Role="tblRealBudget" EntitySet="tblRealBudget" />
     </AssociationSet>

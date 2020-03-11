@@ -20,5 +20,7 @@ namespace SmartAdminMvc.Models
         public Nullable<bool> isActive { get; set; }
         public Nullable<System.DateTime> createDate { get; set; }
         public Nullable<System.DateTime> updateDate { get; set; }
+        public string metaTitle { get; set; }
+        public string metaDescription { get; set; }
     }
 }

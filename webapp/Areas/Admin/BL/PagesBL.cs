@@ -99,6 +99,8 @@ namespace SmartAdminMvc.Areas.Admin.BL
                         test.title = model.name;
                         test.isActive = Convert.ToBoolean(model.status);
                         test.descpriction = model.description;
+                        test.metaTitle = model.metaTitle;
+                        test.metaDescription = model.metaDescription;
                         context.SaveChanges();
                         return true;
                     }

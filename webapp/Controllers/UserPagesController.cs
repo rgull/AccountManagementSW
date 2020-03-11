@@ -29,6 +29,8 @@ namespace SmartAdminMvc.Controllers
                     objtblContentPage.name = obj[0].title;
                     objtblContentPage.description = obj[0].descpriction;
                     objtblContentPage.status = obj[0].isActive.Value;
+                    objtblContentPage.metaTitle = obj[0].metaTitle;
+                    objtblContentPage.metaDescription = obj[0].metaDescription;
                     objtblContentPage.ListOfPages = obj_userCompanyBL.ContentpageListfetch();
                     return View(objtblContentPage);
                 }
