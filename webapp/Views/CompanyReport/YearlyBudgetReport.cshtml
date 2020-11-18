@@ -223,11 +223,20 @@
 
                                                             @*@item.weekAmountlist[i].bugetLineweek1.ToString("0.00");*@
                                                             @System.Configuration.ConfigurationManager.AppSettings["CurrencySymbol"].ToString()@String.Format("{0:N2}", item.Budget1TotalIncome)
+
+
                                                         </span>
                                                         <span class="budgetamount_radio">
                                                             <label>Difference: </label>
                                                             @*@item.weekAmountlist[i].bugetLineweek1.ToString("0.00");*@
                                                             <lebel id="Difference-@item.keyPointid">00.00 %</lebel>
+                                                        </span>
+                                                        <br />
+                                                        <span>
+                                                            <label>
+                                                                <b>  @String.Format("{0:0}", item.percentage) % of Actual Total Income:</b>
+                                                                @System.Configuration.ConfigurationManager.AppSettings["CurrencySymbol"].ToString()@String.Format("{0:N2}", item.Budget1GrossIncome)
+                                                            </label>                                                           
                                                         </span>
                                                     </div>
                                                 </div>

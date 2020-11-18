@@ -88,6 +88,7 @@ namespace SmartAdminMvc.Controllers
                     if (yearlyBudget != null)
                     {
                         model.Income = yearlyBudget.Where(yb=>yb.categoryId==3).Sum(x => x.RealBudgetTotal);
+                        model.ActualIncome = yearlyBudget.Where(yb => yb.categoryId == 3).Sum(x => x.BudgetAmountTotal);
                         if (model.Income != 0)
                             model.AverageTicketValue = model.Income / model.CarCount;
                     }

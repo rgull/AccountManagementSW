@@ -56,6 +56,7 @@ namespace SmartAdminMvc.Models
         public List<YearlyItem> YearlyItems;
         public int CarCount;
         public decimal Income;
+        public decimal ActualIncome;
         public decimal AverageTicketValue;
     }
 
