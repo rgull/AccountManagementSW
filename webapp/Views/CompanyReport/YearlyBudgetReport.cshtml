@@ -187,8 +187,9 @@
                                                         <input type="hidden" Id="Percentage-@item.keyPointid" value="@item.percentage" />
                                                         <input type="hidden" Id="isNet-@item.keyPointid" value="@item.isnetProfitKey" />
                                                         <input type="hidden" Id="groupName-@item.keyPointid" value="@item.groupName" />
+                                                        <input type="hidden" Id="ActualBudget-@item.keyPointid" value="@Model.ActualIncome" />
                                                         @*@Html.HiddenFor(m => item.weekAmountlist[i].mybugetweek1, new { id= "mybugetweek1-"+item.categoryId , value = item.weekAmountlist[i].mybugetweek1, name = "mybugetweek1-" + item.categoryId })
-                                                            @Html.HiddenFor(m => item.weekAmountlist[i].bugetLineweek1, new { id = "bugetLineweek1-"+ item.categoryId , value = item.weekAmountlist[i].bugetLineweek1, name = "bugetLineweek1-" + item.categoryId })*@
+                                                        @Html.HiddenFor(m => item.weekAmountlist[i].bugetLineweek1, new { id = "bugetLineweek1-"+ item.categoryId , value = item.weekAmountlist[i].bugetLineweek1, name = "bugetLineweek1-" + item.categoryId })*@
                                                         @*<canvas id="pieChart@(i)@item.categoryId" height="60"><script> initializeCanvas(@item.weekAmountlist[i].mybugetweek1,@item.weekAmountlist[i].bugetLineweek1,pieChart@(i)@item.categoryId); </script></canvas>*@
                                                         <div id="chart_div-@item.keyPointid" style="width: 400px; height: 150px;"></div>
 
@@ -236,7 +237,12 @@
                                                             <label>
                                                                 <b>  @String.Format("{0:0}", item.percentage) % of Actual Total Income:</b>
                                                                 @System.Configuration.ConfigurationManager.AppSettings["CurrencySymbol"].ToString()@String.Format("{0:N2}", item.Budget1GrossIncome)
-                                                            </label>                                                           
+                                                            </label>
+                                                        </span>
+                                                        <br />
+                                                        <span class="budgetamount_radio">
+                                                            <label>Difference: </label>
+                                                            <lebel id="ActualDifference-@item.keyPointid">00.00 %</lebel>
                                                         </span>
                                                     </div>
                                                 </div>
@@ -725,6 +731,7 @@
                 //var bugetLineweek = document.getElementById("bugetLineweek"+i+"-"+val);
                 //var mybugetweek = document.getElementById("mybugetweek"+i+"-"+val);
                 var Budget1TotalIncome = $("#Budget1TotalIncome-" + val).val();
+                var ActualBudgetTotalIncome = $("#ActualBudget-" + val).val();
                 var Budget1GrossIncome = $("#Budget1TotalIncome-" + val).val();
                 var KeyPointTotal = $("#KeyPointTotal-" + val).val();
                 var KeyGrossIncome = $("#KeyPointTotal-" + val).val();
@@ -771,7 +778,9 @@
                     // alert(Percentage);
                     TotalofExpance = parseFloat(TotalofExpance) + parseFloat(KeyPointTotal);
                 }
-                var difference = (100-((parseFloat(Budget1TotalIncome)/parseFloat(KeyPointTotal))*100));
+            debugger;
+            var difference = (100 - ((parseFloat(Budget1TotalIncome) / parseFloat(KeyPointTotal)) * 100));
+            var actualdifference = (100 - ((parseFloat(ActualBudgetTotalIncome) / parseFloat(KeyPointTotal)) * 100));
                 if(groupName == "SUBLET & TOWING"){
                     difference = (parseFloat(KeyPointTotal)/parseFloat(Budget1TotalIncome))*100;
                     console.log('Sublet: ', difference);
@@ -780,28 +789,41 @@
             // alert(difference);
                  if(isNetprofit == "")
                  {
-                     if(difference>0)
+                     if (difference > 0 || actualdifference>0)
                      {
                          if(val == 0)
                          {
                              $("#Difference-"+val).text(Number(difference).toFixed(2)+" %");
                              $("#Difference-"+val).css("color", "green");
-                             $("#Difference-"+val).css("bold", true);
+                             $("#Difference-" + val).css("bold", true);
+
+                             $("#ActualDifference-" + val).text(Number(actualdifference).toFixed(2) + " %");
+                             $("#ActualDifference-" + val).css("color", "green");
+                             $("#ActualDifference-" + val).css("bold", true);
                          }
                          else if(val > 0)
                          {
                              $("#Difference-"+val).text(Number(difference).toFixed(2)+" %");
                              $("#Difference-"+val).css("color", "red");
-                             $("#Difference-"+val).css("bold", true);
+                             $("#Difference-" + val).css("bold", true);
+
+                             $("#ActualDifference-" + val).text(Number(actualdifference).toFixed(2) + " %");
+                             $("#ActualDifference-" + val).css("color", "red");
+                             $("#ActualDifference-" + val).css("bold", true);
                          }
                      }
-                     else if(difference == Infinity || difference == -Infinity)
+                     else if ((difference == Infinity || difference == -Infinity) || (actualdifference == Infinity || actualdifference ==-Infinity))
                      {
 
                          $("#Difference-"+val).text("N/A");
                          $("#Difference-"+val).css("color", "red");
                          $("#Difference-"+val).css("bold", true);
-                         $("#Difference-"+val).visualization=false;
+                         $("#Difference-" + val).visualization = false;
+
+                         $("#ActualDifference-" + val).text("N/A");
+                         $("#ActualDifference-" + val).css("color", "red");
+                         $("#ActualDifference-" + val).css("bold", true);
+                         $("#ActualDifference-" + val).visualization = false;
                      }
                      else
                      {
@@ -809,41 +831,61 @@
                          {
                              $("#Difference-"+val).text(Number(difference).toFixed(2)*(-1)+" %");
                              $("#Difference-"+val).css("color", "red");
-                             $("#Difference-"+val).css("bold", true);
+                             $("#Difference-" + val).css("bold", true);
+
+                             $("#ActualDifference-" + val).text(Number(actualdifference).toFixed(2) * (-1) + " %");
+                             $("#ActualDifference-" + val).css("color", "red");
+                             $("#ActualDifference-" + val).css("bold", true);
                          }
                          else if(val > 0)
                          {
                              $("#Difference-"+val).text(Number(difference).toFixed(2)*(-1)+" %");
                              $("#Difference-"+val).css("color", "green");
-                             $("#Difference-"+val).css("bold", true);
+                             $("#Difference-" + val).css("bold", true);
+
+                             $("#ActualDifference-" + val).text(Number(actualdifference).toFixed(2) * (-1) + " %");
+                             $("#ActualDifference-" + val).css("color", "green");
+                             $("#ActualDifference-" + val).css("bold", true);
                          }
 
                      }
                  }
                  else
                  {
-                     if(difference>0)
+                     if (difference > 0 || actualdifference > 0)
                      {
                          if(val == 0)
                          {
                              $("#Difference-"+val).text(Number(difference).toFixed(2)+" %");
                              $("#Difference-"+val).css("color", "red");
-                             $("#Difference-"+val).css("bold", true);
+                             $("#Difference-" + val).css("bold", true);
+
+                             $("#ActualDifference-" + val).text(Number(actualdifference).toFixed(2) + " %");
+                             $("#ActualDifference-" + val).css("color", "red");
+                             $("#ActualDifference-" + val).css("bold", true);
                          }
                          else if(val > 0)
                          {
                              $("#Difference-"+val).text(Number(difference).toFixed(2)+" %");
                              $("#Difference-"+val).css("color", "green");
-                             $("#Difference-"+val).css("bold", true);
+                             $("#Difference-" + val).css("bold", true);
+
+                             $("#ActualDifference-" + val).text(Number(actualdifference).toFixed(2) + " %");
+                             $("#ActualDifference-" + val).css("color", "green");
+                             $("#ActualDifference-" + val).css("bold", true);
                          }
                      }
-                     else if(difference == Infinity || difference == -Infinity)
+                     else if ((difference == Infinity || difference == -Infinity) || (actualdifference == Infinity || actualdifference == -Infinity))
                      {
-
                          $("#Difference-"+val).text("N/A");
                          $("#Difference-"+val).css("color", "green");
                          $("#Difference-"+val).css("bold", true);
-                         $("#Difference-"+val).visualization=false;
+                         $("#Difference-" + val).visualization = false;
+
+                         $("#ActualDifference-" + val).text("N/A");
+                         $("#ActualDifference-" + val).css("color", "green");
+                         $("#ActualDifference-" + val).css("bold", true);
+                         $("#ActualDifference-" + val).visualization = false;
                      }
                      else
                      {
@@ -851,13 +893,21 @@
                          {
                              $("#Difference-"+val).text(Number(difference).toFixed(2)*(-1)+" %");
                              $("#Difference-"+val).css("color", "green");
-                             $("#Difference-"+val).css("bold", true);
+                             $("#Difference-" + val).css("bold", true);
+
+                             $("#ActualDifference-" + val).text(Number(actualdifference).toFixed(2) * (-1) + " %");
+                             $("#ActualDifference-" + val).css("color", "green");
+                             $("#ActualDifference-" + val).css("bold", true);
                          }
                          else if(val > 0)
                          {
                              $("#Difference-"+val).text(Number(difference).toFixed(2)*(-1)+" %");
                              $("#Difference-"+val).css("color", "red");
-                             $("#Difference-"+val).css("bold", true);
+                             $("#Difference-" + val).css("bold", true);
+
+                             $("#ActualDifference-" + val).text(Number(actualdifference).toFixed(2) * (-1) + " %");
+                             $("#ActualDifference-" + val).css("color", "red");
+                             $("#ActualDifference-" + val).css("bold", true);
                          }
 
                      }
