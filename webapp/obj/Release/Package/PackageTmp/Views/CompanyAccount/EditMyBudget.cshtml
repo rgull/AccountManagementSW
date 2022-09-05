@@ -32,7 +32,7 @@
                                 <label class="label"> Car Counts</label>
                                 <div class="input">
                                     <i></i>
-                                    @*@Html.TextBoxFor(model => model.date, new { @class = "form-control datepicker", @required = "required", placeholder = "Expected date here..." })*@
+                                    @*@Html.TextBoxFor(model => model.date, new { @class = "form-control datepicker", @required = "required", placeholder = "Expected date here..." })*@                                    
                                     @Html.TextBoxFor(m => m.carCounts, new { @class = "form-control", id = "carcounts", @required = "required" })
                                     @*<input id="finishdate" class="form-control hasDatepicker" type="text" placeholder="Expected finish date" name="finishdate">*@
                                     @Html.HiddenFor(m => m.carCountId)
@@ -40,30 +40,61 @@
                             </section>
                             @for (int j = 0; j < Model.MyValuebudgetFullList.Count(); j++)
                             {
-                                <section>
-                                    @*<label class="label">@Html.LabelFor(m => m.MyValuebudgetFullList[j].budgetTypeName, Model.MyValuebudgetFullList[j].budgetTypeName)</label>
-                                    <label class="label">@Html.LabelFor(m => m.MyValuebudgetFullList[j].categoryName, Model.MyValuebudgetFullList[j].categoryName)</label>*@
-                                    <h3 class="subttl">@Html.LabelFor(m => m.MyValuebudgetFullList[j].categoryName, Model.MyValuebudgetFullList[j].categoryName) - ( @Html.LabelFor(m => m.MyValuebudgetFullList[j].budgetTypeName, Model.MyValuebudgetFullList[j].budgetTypeName) )</h3>
-                                    @Html.HiddenFor(m => m.MyValuebudgetFullList[j].categoryId)
-                                    @Html.HiddenFor(m => m.MyValuebudgetFullList[j].budgetTypeId)
-                                    @*<label class="input">*@
+                            <section>
+                                @*<label class="label">@Html.LabelFor(m => m.MyValuebudgetFullList[j].budgetTypeName, Model.MyValuebudgetFullList[j].budgetTypeName)</label>
+        <label class="label">@Html.LabelFor(m => m.MyValuebudgetFullList[j].categoryName, Model.MyValuebudgetFullList[j].categoryName)</label>*@
+                                <h3 class="subttl">
 
-                                    @for (int i = 0; i < Model.MyValuebudgetFullList[j].MyValueParameterList.Count(); i++)
-                                    {
-                                        <div class="formrow">
-                                            
-                                                @Html.LabelFor(m => m.MyValuebudgetFullList[j].MyValueParameterList[i].name, Model.MyValuebudgetFullList[j].MyValueParameterList[i].name)
-                                            @*(@System.Configuration.ConfigurationManager.AppSettings["CurrencySymbol"].ToString())*@
-                                                <i></i>@Html.TextBoxFor(m => m.MyValuebudgetFullList[j].MyValueParameterList[i].budget, new { @class = "form-control", id = "BugetValue", @required = "required" })
-                                                @Html.HiddenFor(m => m.MyValuebudgetFullList[j].MyValueParameterList[i].id)
-                                                @Html.HiddenFor(m => m.MyValuebudgetFullList[j].MyValueParameterList[i].MyBudgetid)
-                                                @Html.HiddenFor(m => m.MyValuebudgetFullList[j].MyValueParameterList[i].reportType)
-                                           
-                                        </div>
-                                    }
+                                    @Html.LabelFor(m => m.MyValuebudgetFullList[j].categoryName, Model.MyValuebudgetFullList[j].categoryName) -
+                                    
 
-                                            @*</label>*@
-</section>
+                                    ( @Html.LabelFor(m => m.MyValuebudgetFullList[j].budgetTypeName, Model.MyValuebudgetFullList[j].budgetTypeName) )
+                                </h3>
+                                @Html.HiddenFor(m => m.MyValuebudgetFullList[j].categoryId)
+                                @Html.HiddenFor(m => m.MyValuebudgetFullList[j].budgetTypeId)
+                                @*<label class="input">*@
+
+                                @for (int i = 0; i < Model.MyValuebudgetFullList[j].MyValueParameterList.Count(); i++)
+                                {
+                                    @*<h3 class="subttl">
+
+                                        @Html.LabelFor(m => m.MyValuebudgetFullList[j].categoryName, Model.MyValuebudgetFullList[j].categoryName) -
+                                        @if ((Model.MyValuebudgetFullList[j].MyValueParameterList[j]).isAddOnceInMonth == true)
+                                        {
+                                            @Html.Label(Model.MyValuebudgetFullList[j].budgetTypeName + " - M")
+                                        }
+                                        else
+                                        {
+                                            @Html.LabelFor(m => m.MyValuebudgetFullList[j].budgetTypeName, Model.MyValuebudgetFullList[j].budgetTypeName)
+                                        }
+
+                                        
+                                    </h3>*@
+                                    <div class="formrow">
+
+                                        @Html.LabelFor(m => m.MyValuebudgetFullList[j].MyValueParameterList[i].name, Model.MyValuebudgetFullList[j].MyValueParameterList[i].name)
+                                        @*(@System.Configuration.ConfigurationManager.AppSettings["CurrencySymbol"].ToString())*@
+                                        <i></i>
+                                        @* RGK Rick Email 21 Jan 2019*@
+                                        @if (Model.MyValuebudgetFullList[j].MyValueParameterList[i].IsDisabled == true)
+                                        {
+                                            @Html.TextBoxFor(m => m.MyValuebudgetFullList[j].MyValueParameterList[i].budget, new { @class = "form-control", id = "BugetValue", @required = "required", @disabled = "" })
+                                        }
+                                        else
+                                        {
+                                            @Html.TextBoxFor(m => m.MyValuebudgetFullList[j].MyValueParameterList[i].budget, new { @class = "form-control", id = "BugetValue", @required = "required" })
+                                        }
+                                        @*@Html.TextBoxFor(m => m.MyValuebudgetFullList[j].MyValueParameterList[i].budget, new { @class = "form-control", id = "BugetValue", @required = "required" })*@
+                                        @Html.HiddenFor(m => m.MyValuebudgetFullList[j].MyValueParameterList[i].id)
+                                        @Html.HiddenFor(m => m.MyValuebudgetFullList[j].MyValueParameterList[i].MyBudgetid)
+                                        @Html.HiddenFor(m => m.MyValuebudgetFullList[j].MyValueParameterList[i].reportType)
+                                        @Html.HiddenFor(m => m.MyValuebudgetFullList[j].MyValueParameterList[i].IsDisabled)
+
+                                    </div>
+                                }
+
+                                @*</label>*@
+                            </section>
 
                             }
 

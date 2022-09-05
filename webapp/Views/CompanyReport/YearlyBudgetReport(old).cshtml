@@ -232,6 +232,7 @@
                     var DiffOfBudget1TotalIncomeAndKeyPointTotal = (parseFloat(Budget1TotalIncome - parseFloat(KeyPointTotal))).toFixed(3);
                     var ActualBudgetTotalIncome = $("#ActualBudget-" + KeypointId).val();
                     var totalIncomewithoutDiscount = $("#totalincomwithoutdiscount").val();
+                    var difference = (100 - ((parseFloat(Budget1TotalIncome) / parseFloat(KeyPointTotal)) * 100));
                     var actualdifference = (100 - ((parseFloat(ActualBudgetTotalIncome) / parseFloat(KeyPointTotal)) * 100));
 
                     var MaxLimit = Math.round(Budget1TotalIncome) * 2;
@@ -266,7 +267,7 @@
                             MinLimit = Math.round(KeyPointTotal) - 1000;                            
                         }
                     }
-                    if (groupName == "NET TOTAL" || groupName =="RETAINED EARNINGS") {
+                    if (groupName == "NET TOTAL") {
                         greenFromValue = Math.round(Budget1TotalIncome);
                         greenToValue = MaxLimit;
                         redFromValue = 0;
@@ -323,20 +324,19 @@
                     chart.draw(data, options);
 
                     //RGK 04-14-2018   -----  Assigning color to to Value Text  -----
-                    if (groupName == "NET TOTAL" || groupName == "RETAINED EARNINGS") {
+                    if (groupName == "NET TOTAL") {
                         if (DiffOfBudget1TotalIncomeAndKeyPointTotal > 0) {
                             $(this).parent().find(('svg text:nth-child(1)')).attr('fill', '#ff0000');  //---Red
                         }
                         else {
                             $(this).parent().find(('svg text:nth-child(1)')).attr('fill', '#00ff00');   //---Green
-                            differenceColor = "green";
                         }
 
                     }
                     //RGK 09-10-2018. Show Difference Value for all Categories except Towing
                     //if (groupName != "SUBLET & TOWING" && groupName != "NET TOTAL") {
                     else {
-                        if (Number(KeyPointTotal) > Number(Budget1TotalIncome)) {
+                        if (KeyPointTotal > Budget1TotalIncome) {
                             $(this).parent().find(('svg text:nth-child(1)')).attr('fill', '#ff0000');
                         }
                         else {

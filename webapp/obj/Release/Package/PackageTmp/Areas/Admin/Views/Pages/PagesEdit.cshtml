@@ -27,10 +27,22 @@
                                 </label>
                             </section>
                             <section class="formrow2">
+                                <label class="label"> Meta Title</label>
+                                <label class="input">
+                                    @Html.TextBoxFor(m => m.metaTitle, new { @class = "form-control", @required = "required" })
+                                </label>
+                            </section>
+                            <section class="formrow2">
+                                <label class="label"> Meta Description</label>
+                                <label class="input">
+                                    @Html.TextBoxFor(m => m.metaDescription, new { @class = "form-control", @required = "required" })
+                                </label>
+                            </section>
+                            <section class="formrow2">
                                 <label class="label"> Content Description</label>
                                 <label class="edietLebal">
                                     @Html.TextAreaFor(m => m.description, new { @class = "ckeditor" })
-                                    </label>
+                                </label>
                             </section>
                             <section class="formrow2">
                                 <label class="label">Status</label>

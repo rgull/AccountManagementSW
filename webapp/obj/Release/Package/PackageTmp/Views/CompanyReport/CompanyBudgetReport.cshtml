@@ -262,7 +262,7 @@
                                                                     @if (1 <= item.CategoryParameterslist[p].weeklyParaList[s].totalweekdays)
                                                                     {
                                                                         <td>
-                                                                            <span class="span_con">
+                                                                            <span class="span_con">                                                                                
                                                                                 @System.Configuration.ConfigurationManager.AppSettings["CurrencySymbol"].ToString()@String.Format("{0:N2}", item.CategoryParameterslist[p].weeklyParaList[s].bugetLineweek1)
                                                                             </span>
                                                                             <span class="span_con">
@@ -376,7 +376,7 @@
                                                                     @if (2 <= item.CategoryParameterslist[p].weeklyParaList[s].totalweekdays)
                                                                     {
                                                                         <td>
-                                                                            <span class="span_con">
+                                                                            <span class="span_con">                                                                                
                                                                                 @System.Configuration.ConfigurationManager.AppSettings["CurrencySymbol"].ToString()@String.Format("{0:N2}", item.CategoryParameterslist[p].weeklyParaList[s].bugetLineweek2)
                                                                             </span>
                                                                             <span class="span_con">
@@ -2630,7 +2630,9 @@
             var BUDGET2EXPENSES =$("#BUDGET2EXPENSES").val();
             var BUDGET3EXPENSES =$("#BUDGET3EXPENSES").val();
             var UTILITIESEXPENSES =$("#UTILITIESEXPENSES").val();
-            GrossProfittotal = $("#mybugetweekNPT-" + UTILITIESEXPENSES).val();
+            //RGK
+            //GrossProfittotal = $("#mybugetweekNPT-" + UTILITIESEXPENSES).val();
+           
             if (GrossProfittotal === undefined)
                 GrossProfittotal = "0";
             //alert(GrossProfittotal);
@@ -2638,7 +2640,11 @@
             expenceforGP = parseFloat($("#mybugetweekT-" + BUDGET3EXPENSES).val()) + parseFloat($("#mybugetweekT-" + UTILITIESEXPENSES).val());
             if (expenceforGP === undefined)
                 expenceforGP = "0";
-            GrossBudget2total = $("#mybugetweekIvsCT-" + BUDGET2EXPENSES).val();
+            //GrossBudget2total = $("#mybugetweekIvsCT-" + BUDGET2EXPENSES).val();
+            //RGK Updated Gross Profit Calculations
+            GrossBudget2total = ($("#mybugetweekT-" + BUDGET1Income).val() - $("#mybugetweekT-"+BUDGET2EXPENSES).val());
+            // RGK Gross Proft Total Calculations
+            GrossProfittotal = GrossBudget2total - expenceforGP;
             if (GrossBudget2total === undefined)
                 GrossBudget2total = "0";
             var Budget2totalExpence= $("#mybugetweekT-"+BUDGET2EXPENSES).val();
@@ -2651,22 +2657,22 @@
             
             
             $("#lblB3andU").text(expenceforGP.toFixed(2).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
-            $("#lblgpforNP").text(GrossBudget2total.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+            $("#lblgpforNP").text(GrossBudget2total.toFixed(2).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
             //$("#lblgpforNPpro").text(GrossBudget2total.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
             $("#lblgpforNPpro").text(parseFloat(Budget1totalIncome).toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
             console.log($("#mybugetweekT-" + BUDGET1Income).val());
-            $("#lblNETpro").text(GrossProfittotal.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+            $("#lblNETpro").text(GrossProfittotal.toFixed(2).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
 
-            $("#lblNP").text(GrossProfittotal.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+            $("#lblNP").text(GrossProfittotal.toFixed(2).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
             var GrossBudget2parsntage =(GrossBudget2total/Budget1totalIncome)*100;
             //var GPparsntage =(GrossProfittotal/GrossBudget2total)*100;
             var GPparsntage =(GrossProfittotal/Budget1totalIncome)*100;
             $("#lblNPpercent").text(GPparsntage.toFixed(2));
             //$("#TotalIncome").text(GrossBudget2total.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
-            $("#lblgrossprofit").text(GrossBudget2total.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+            $("#lblgrossprofit").text(GrossBudget2total.toFixed(2).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
             $("#lbltotalIncombuget1").text(parseFloat(Budget1totalIncome).toFixed(2).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
             $("#lbltotalexpanceBudget2").text(parseFloat(Budget2totalExpence).toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
-            $("#lblgrossprofitPROFIT").text(GrossBudget2total.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+            $("#lblgrossprofitPROFIT").text(GrossBudget2total.toFixed(2).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
             $("#lbltotalIncombuget1INCOM").text(parseFloat(Budget1totalIncome).toFixed(2).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
             $("#lblgrossprofitpercent").text(GrossBudget2parsntage.toFixed(2));
             // $("#lblgrossprofit").text('$' + GrossBudget2total.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
@@ -2680,7 +2686,9 @@
                 avareticit=TotalofIncome/cars
                 // alert()
                 $("#lbltotalincom").text('$' + TotalofIncome.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
-                $("#lbltotalincomwithoutdiscount").text('$' + TotalIncomeWithoutDiscount.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+                //$("#lbltotalincomwithoutdiscount").text('$' + TotalIncomeWithoutDiscount.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+                //RGK 03-27-2018
+                $("#lbltotalincomwithoutdiscount").text('$' + TotalofIncome.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
                 $("#lblavragetckit").text('$' + avareticit.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
                 
             }
@@ -2688,7 +2696,9 @@
             {
                 avareticit=0;
                 $("#lbltotalincom").text('$' + TotalofIncome.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
-                $("#lbltotalincomwithoutdiscount").text('$' + TotalIncomeWithoutDiscount.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+                //$("#lbltotalincomwithoutdiscount").text('$' + TotalIncomeWithoutDiscount.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+                //RGK 03-27-2018
+                $("#lbltotalincomwithoutdiscount").text('$' + TotalofIncome.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
                 $("#lblavragetckit").text('$' + avareticit.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
             }
 
@@ -2702,7 +2712,7 @@
                 $('#margin').css("color", "green");
                 $('#margin').css("bold", true);
                 var profit =parseFloat(TotalofIncome)- parseFloat(TotalofExpance);
-                totalparsentage = Number((profit*100)/parseFloat(TotalofExpance)).toFixed(2);
+                totalparsentage = Number((profit*100)/parseFloat(TotalofIncome)).toFixed(2);
                 //var profit =parseFloat(GrossBudget2total)- parseFloat(TotalofExpance);
                 //totalparsentage = Number((profit*100)/parseFloat(TotalofExpance)).toFixed(2);
             }
@@ -3428,7 +3438,7 @@
                 {
                     //  alert(BudgetTypeId);
                     TotalofIncome = parseFloat(TotalofIncome) + parseFloat(mybugetweek);
-                    
+                    console.log("TotalIncomeWithoutDiscount: " + TotalIncomeWithoutDiscount);
                         TotalIncomeWithoutDiscount = parseFloat(TotalIncomeWithoutDiscount) + parseFloat(mybugetweek);
                     
                 }
@@ -3473,7 +3483,11 @@
 
             }
             TotalDicount = @TotalDiscount;
-            TotalIncomeWithoutDiscount = TotalofIncome + TotalDicount;
+            console.log('TotalofIncome: ' + TotalofIncome);
+            console.log('TotalDicount: ' + TotalDicount);
+            console.log('TotalIncomeWithoutDiscount: ' + TotalIncomeWithoutDiscount);
+            //TotalIncomeWithoutDiscount = TotalofIncome + TotalDicount;
+            TotalIncomeWithoutDiscount = TotalofIncome - TotalDicount;
         });
 
     </script>

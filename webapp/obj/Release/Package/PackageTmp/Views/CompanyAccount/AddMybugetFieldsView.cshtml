@@ -12,8 +12,16 @@
 
                                         @for (int i = 0; i < Model.MyValuebudgetFullList[j].MyValueParameterList.Count(); i++)
                                         {
-                                            <div class="formrow">
-                                                @Html.LabelFor(m => m.MyValuebudgetFullList[j].MyValueParameterList[i].name, Model.MyValuebudgetFullList[j].MyValueParameterList[i].name)
+                                            <div class="formrow">                                               
+                                                @*@Html.LabelFor(m => m.MyValuebudgetFullList[j].MyValueParameterList[i].name, Model.MyValuebudgetFullList[j].MyValueParameterList[i].name)*@  
+                                                @if((Model.MyValuebudgetFullList[j].MyValueParameterList[i]).isAddOnceInMonth == true)
+                                                {
+                                                    @Html.Label(Model.MyValuebudgetFullList[j].MyValueParameterList[i].name + " - M")
+                                                }
+                                                else
+                                                {
+                                                    @Html.Label(Model.MyValuebudgetFullList[j].MyValueParameterList[i].name )
+                                                }
                                                 @*(@System.Configuration.ConfigurationManager.AppSettings["CurrencySymbol"].ToString())*@
                                                 <i></i>
                                                 @if (Model.MyValuebudgetFullList[j].MyValueParameterList[i].IsDisabled == true)
